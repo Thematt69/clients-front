@@ -1,4 +1,7 @@
-class Clients {
+import '../../../../infrastructure/dtos/dtos.exports.dart';
+import '../../../core/entities/entity_factory.dart';
+
+class Clients implements EntityFactory<Clients, ClientsDto> {
   String guid;
   String first;
   String last;
@@ -31,5 +34,22 @@ class Clients {
       city: city ?? this.city,
       zip: zip ?? this.zip,
     );
+  }
+
+  @override
+  Clients fromDto(ClientsDto dto) {
+    return Clients(
+      guid: dto.guid,
+      first: dto.first,
+      last: dto.last,
+      street: dto.street,
+      city: dto.city,
+      zip: dto.zip,
+    );
+  }
+
+  @override
+  ClientsDto toDto(Clients entity) {
+    return ClientsDto();
   }
 }
