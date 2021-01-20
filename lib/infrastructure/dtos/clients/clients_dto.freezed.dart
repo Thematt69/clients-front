@@ -23,7 +23,7 @@ class _$ClientsDtoTearOff {
       @JsonKey(name: 'last') String last,
       @JsonKey(name: 'street') String street,
       @JsonKey(name: 'city') String city,
-      @JsonKey(name: 'zip') int zip}) {
+      @JsonKey(name: 'zip') String zip}) {
     return _ClientsDto(
       guid: guid,
       first: first,
@@ -57,7 +57,7 @@ mixin _$ClientsDto {
   @JsonKey(name: 'city')
   String get city;
   @JsonKey(name: 'zip')
-  int get zip;
+  String get zip;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -75,7 +75,7 @@ abstract class $ClientsDtoCopyWith<$Res> {
       @JsonKey(name: 'last') String last,
       @JsonKey(name: 'street') String street,
       @JsonKey(name: 'city') String city,
-      @JsonKey(name: 'zip') int zip});
+      @JsonKey(name: 'zip') String zip});
 }
 
 /// @nodoc
@@ -101,7 +101,7 @@ class _$ClientsDtoCopyWithImpl<$Res> implements $ClientsDtoCopyWith<$Res> {
       last: last == freezed ? _value.last : last as String,
       street: street == freezed ? _value.street : street as String,
       city: city == freezed ? _value.city : city as String,
-      zip: zip == freezed ? _value.zip : zip as int,
+      zip: zip == freezed ? _value.zip : zip as String,
     ));
   }
 }
@@ -118,7 +118,7 @@ abstract class _$ClientsDtoCopyWith<$Res> implements $ClientsDtoCopyWith<$Res> {
       @JsonKey(name: 'last') String last,
       @JsonKey(name: 'street') String street,
       @JsonKey(name: 'city') String city,
-      @JsonKey(name: 'zip') int zip});
+      @JsonKey(name: 'zip') String zip});
 }
 
 /// @nodoc
@@ -146,7 +146,7 @@ class __$ClientsDtoCopyWithImpl<$Res> extends _$ClientsDtoCopyWithImpl<$Res>
       last: last == freezed ? _value.last : last as String,
       street: street == freezed ? _value.street : street as String,
       city: city == freezed ? _value.city : city as String,
-      zip: zip == freezed ? _value.zip : zip as int,
+      zip: zip == freezed ? _value.zip : zip as String,
     ));
   }
 }
@@ -183,7 +183,7 @@ class _$_ClientsDto implements _ClientsDto {
   final String city;
   @override
   @JsonKey(name: 'zip')
-  final int zip;
+  final String zip;
 
   @override
   String toString() {
@@ -236,7 +236,7 @@ abstract class _ClientsDto implements ClientsDto {
       @JsonKey(name: 'last') String last,
       @JsonKey(name: 'street') String street,
       @JsonKey(name: 'city') String city,
-      @JsonKey(name: 'zip') int zip}) = _$_ClientsDto;
+      @JsonKey(name: 'zip') String zip}) = _$_ClientsDto;
 
   factory _ClientsDto.fromJson(Map<String, dynamic> json) =
       _$_ClientsDto.fromJson;
@@ -258,7 +258,7 @@ abstract class _ClientsDto implements ClientsDto {
   String get city;
   @override
   @JsonKey(name: 'zip')
-  int get zip;
+  String get zip;
   @override
   @JsonKey(ignore: true)
   _$ClientsDtoCopyWith<_ClientsDto> get copyWith;

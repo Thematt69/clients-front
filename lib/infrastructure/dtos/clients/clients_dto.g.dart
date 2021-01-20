@@ -13,7 +13,7 @@ _$_ClientsDto _$_$_ClientsDtoFromJson(Map<String, dynamic> json) {
     last: json['last'] as String,
     street: json['street'] as String,
     city: json['city'] as String,
-    zip: json['zip'] as int,
+    zip: json['zip'] as String,
   );
 }
 

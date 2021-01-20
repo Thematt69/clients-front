@@ -1,9 +1,12 @@
+import 'package:clients/domain/core/controllers/controller_factory.dart';
+import 'package:clients/domain/core/entities/entities.exports.dart';
 import 'package:clients/domain/features/clients/repositories/clients_repository.dart';
+import 'package:clients/infrastructure/dtos/dtos.exports.dart';
+import 'package:flutter/material.dart';
 
-class ClientsController {
-  final ClientsRepository _clientsRepository;
-
+class ClientsController extends ControllerFactory<Clients, ClientsDto> {
   ClientsController({
-    ClientsRepository clientsRepository,
-  }) : _clientsRepository = clientsRepository;
+    @required Clients clients,
+    @required ClientsRepository clientsRepository,
+  }) : super(repository: clientsRepository, entityFactory: clients);
 }

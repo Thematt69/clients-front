@@ -12,7 +12,7 @@ abstract class ClientsDto with _$ClientsDto {
     @JsonKey(name: 'last') String last,
     @JsonKey(name: 'street') String street,
     @JsonKey(name: 'city') String city,
-    @JsonKey(name: 'zip') int zip,
+    @JsonKey(name: 'zip') String zip,
   }) = _ClientsDto;
   factory ClientsDto.fromJson(Map<String, dynamic> json) =>
       _$ClientsDtoFromJson(json);

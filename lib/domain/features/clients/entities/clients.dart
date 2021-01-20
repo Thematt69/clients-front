@@ -7,7 +7,7 @@ class Clients implements EntityFactory<Clients, ClientsDto> {
   String last;
   String street;
   String city;
-  int zip;
+  String zip;
 
   Clients({
     this.guid,
@@ -24,7 +24,7 @@ class Clients implements EntityFactory<Clients, ClientsDto> {
     String last,
     String street,
     String city,
-    int zip,
+    String zip,
   }) {
     return Clients(
       guid: guid ?? this.guid,
@@ -50,6 +50,13 @@ class Clients implements EntityFactory<Clients, ClientsDto> {
 
   @override
   ClientsDto toDto(Clients entity) {
-    return ClientsDto();
+    return ClientsDto(
+      guid: entity.guid,
+      first: entity.first,
+      last: entity.last,
+      street: entity.street,
+      city: entity.city,
+      zip: entity.zip,
+    );
   }
 }

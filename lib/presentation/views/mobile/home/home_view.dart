@@ -12,6 +12,12 @@ class HomeView extends GetView<HomeController> {
       appBar: AppBar(
         centerTitle: true,
         title: Text('Listing des clients'),
+        actions: [
+          IconButton(
+            icon: Icon(MdiIcons.refresh),
+            onPressed: () async => await controller.refresh(),
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -36,12 +42,17 @@ class HomeView extends GetView<HomeController> {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Text('first last - street, city zip');
-                },
-              ),
+              child: controller.clientsList.isNotEmpty
+                  ? ListView.builder(
+                      itemCount: controller.clientsList.length,
+                      itemBuilder: (context, index) {
+                        return Text(
+                            '${controller.clientsList[index].first} ${controller.clientsList[index].last} - ${controller.clientsList[index].street}, ${controller.clientsList[index].city} ${controller.clientsList[index].zip}');
+                      },
+                    )
+                  : Center(
+                      child: Text("Aucun client"),
+                    ),
             ),
           ),
         ],

@@ -1,12 +1,24 @@
 import 'package:clients/domain/core/entities/entities.exports.dart';
+import 'package:clients/domain/features/clients/controllers/clients_controller.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   RxBool isCancel = false.obs;
-  RxList<Clients> clientsList = [].obs;
+  RxList<Clients> clientsList = <Clients>[].obs;
+  final ClientsController clientsController;
+
+  HomeController({
+    @required this.clientsController,
+  });
 
   @override
-  void onInit() {
+  Future<void> onInit() async {
+    try {
+      clientsList.addAll((await clientsController.index()).data);
+    } catch (e) {
+      debugPrint(e);
+    }
     super.onInit();
   }
 
@@ -18,5 +30,10 @@ class HomeController extends GetxController {
   @override
   void onClose() {
     super.onClose();
+  }
+
+  Future<void> refresh() async {
+    clientsList.clear();
+    clientsList.addAll((await clientsController.index()).data);
   }
 }
