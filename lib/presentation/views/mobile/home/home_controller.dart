@@ -7,6 +7,7 @@ class HomeController extends GetxController {
   RxBool isCancel = false.obs;
   RxList<Clients> clientsList = <Clients>[].obs;
   final ClientsController clientsController;
+  //TODO - Gestion de state
 
   HomeController({
     @required this.clientsController,

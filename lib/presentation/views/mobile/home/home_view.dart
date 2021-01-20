@@ -60,8 +60,8 @@ class HomeView extends GetView<HomeController> {
       floatingActionButton: FloatingActionButton(
         child: Icon(
           Get.isDarkMode
-              ? MdiIcons.moonWaningCrescent
-              : MdiIcons.whiteBalanceSunny,
+              ? MdiIcons.whiteBalanceSunny
+              : MdiIcons.moonWaningCrescent,
         ),
         onPressed: () {
           Get.changeThemeMode(
