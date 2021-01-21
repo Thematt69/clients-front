@@ -1,5 +1,6 @@
 import 'package:clients/domain/core/entities/entities.exports.dart';
 import 'package:clients/domain/features/clients/controllers/clients_controller.dart';
+import 'package:clients/presentation/core/loading_state.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,7 +8,8 @@ class HomeController extends GetxController {
   RxBool isCancel = false.obs;
   RxList<Clients> clientsList = <Clients>[].obs;
   final ClientsController clientsController;
-  //TODO - Gestion de state
+
+  Rx<LoadingState> loadingState = LoadingState.initial().obs;
 
   HomeController({
     @required this.clientsController,
@@ -16,9 +18,13 @@ class HomeController extends GetxController {
   @override
   Future<void> onInit() async {
     try {
+      loadingState.value = LoadingState.loading();
+
       clientsList.addAll((await clientsController.index()).data);
+
+      loadingState.value = LoadingState.loaded();
     } catch (e) {
-      debugPrint(e);
+      loadingState.value = LoadingState.error(message: e);
     }
     super.onInit();
   }
