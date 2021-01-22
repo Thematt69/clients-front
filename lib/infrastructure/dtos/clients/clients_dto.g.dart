@@ -6,7 +6,7 @@ part of 'clients_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ClientsDto _$_$_lientsDtoFromJson(Map<String, dynamic> json) {
+_$_ClientsDto _$_$_ClientsDtoFromJson(Map<String, dynamic> json) {
   return _$_ClientsDto(
     guid: json['guid'] as String,
     first: json['first'] as String,
