@@ -26,12 +26,10 @@ void main() async {
 Future<void> initServices() async {
   print('starting services ...');
 
-  /// Here is where you put get_storage, hive, shared_pref initialization.
-  /// or moor connection, or whatever that's async.
-  Get.lazyPut(() => Env());
+  Get.put(Env());
 
-  Get.lazyPut(
-    () => RestApiClient(
+  Get.put(
+    RestApiClient(
       restApiInterceptor: Get.put(
         RestApiInterceptor(),
       ),

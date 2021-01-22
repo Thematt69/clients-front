@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:clients/presentation/core/extensions/color_extensions.dart';
 import 'styles.dart';
 
@@ -11,13 +10,13 @@ class XThemeData {
       accentColorBrightness: Brightness.light,
       primaryColorBrightness: Brightness.light,
       //NOTE The background color for major parts of the app (toolbars, tab bars, etc)
-      primaryColor: Colors.white.darker(0.5),
+      primaryColor: Colors.white.darker(0.35),
       //NOTE color for widget (knobs, text, overscroll edge effect, etc)
       accentColor: kRedXefi.darker(0.2),
       //NOTE The default color of the Material that underlies the Scaffold.
-      backgroundColor: Colors.white.darker(0.3),
+      backgroundColor: Colors.white.darker(0.15),
       //NOTE The default color of MaterialType.canvas Material. like dropdown menu
-      canvasColor: Colors.white.darker(0.1),
+      canvasColor: Colors.white.darker(0.02),
       //NOTE The color of cursors in Material-style text fields
       textSelectionTheme: TextSelectionThemeData(
         cursorColor: kRedXefi.darker(0.2),
@@ -31,7 +30,7 @@ class XThemeData {
       //NOTE The color to use for input validation errors, e.g. in TextField fields
       // errorColor: ,
       //NOTE The focus color used indicate that a component has the input focus.
-      focusColor: Colors.white.darker(0.5),
+      focusColor: Colors.white.darker(0.35),
       //NOTE The highlight color used during ink splash animations or to indicate an item in a menu is selected.
       highlightColor: Colors.transparent,
       //NOTE The color to use for hint text or placeholder text, e.g. in TextField fields
@@ -41,7 +40,7 @@ class XThemeData {
       //NOTE The color of the selected tab indicator in a tab bar
       indicatorColor: Colors.white,
       //NOTE The default color of the Material that underlies the Scaffold
-      scaffoldBackgroundColor: Colors.white.darker(0.3),
+      scaffoldBackgroundColor: Colors.white.darker(0.15),
       //NOTE The color of the header of a PaginatedDataTable when there are selected rows
       // secondaryHeaderColor: ,
       //NOTE The color used to highlight selected rows.
@@ -53,7 +52,7 @@ class XThemeData {
       //NOTE The color used to highlight the active states of toggleable widgets like Switch, Radio, and Checkbox
       toggleableActiveColor: kRedXefi.darker(0.2),
       //NOTE The color used for widgets in their inactive (but enabled) state
-      unselectedWidgetColor: Colors.white.darker(0.45),
+      unselectedWidgetColor: Colors.white.darker(0.30),
       //NOTE The default fill color of the Material used in RaisedButtons
       // buttonColor: ,
 
@@ -69,40 +68,40 @@ class XThemeData {
       ),
       //NOTE The background color of Dialog elements.
       dialogTheme: DialogTheme(
-        backgroundColor: Colors.white.darker(0.4),
+        backgroundColor: Colors.white.darker(0.25),
         contentTextStyle: kTextStyle,
       ),
       cardTheme: CardTheme(
-        color: Colors.white.darker(0.2),
+        color: Colors.white.darker(0.075),
         elevation: 4,
       ),
       appBarTheme: AppBarTheme(
-        color: Colors.white.darker(0.4),
+        color: Colors.white.darker(0.25),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           backgroundColor:
-              MaterialStateProperty.all<Color>(Colors.white.darker(0.6)),
+              MaterialStateProperty.all<Color>(Colors.white.darker(0.45)),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         labelStyle: kTextStyle.copyWith(fontSize: 15, color: Colors.black),
-        fillColor: Colors.white.darker(0.1),
-        focusColor: Colors.white.darker(0.1),
-        hoverColor: Colors.white.darker(0.1),
+        fillColor: Colors.white.darker(0.02),
+        focusColor: Colors.white.darker(0.02),
+        hoverColor: Colors.white.darker(0.02),
         counterStyle: kTextStyle,
         filled: true,
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white.darker(0.1), width: 1),
+          borderSide: BorderSide(color: Colors.white.darker(0.02), width: 1),
         ),
         border: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white.darker(0.1), width: 1),
+          borderSide: BorderSide(color: Colors.white.darker(0.02), width: 1),
         ),
         errorBorder: OutlineInputBorder(
           borderSide: BorderSide(color: kRedXefi.darker(0.1), width: 1),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white.darker(0.15), width: 1),
+          borderSide: BorderSide(color: Colors.white.darker(0.05), width: 1),
         ),
         prefixStyle: kTextStyle.copyWith(color: Colors.white),
         suffixStyle: kTextStyle.copyWith(color: Colors.white),
@@ -112,7 +111,7 @@ class XThemeData {
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
           foregroundColor:
-              MaterialStateProperty.all<Color>(Colors.white.darker(0.6)),
+              MaterialStateProperty.all<Color>(Colors.white.darker(0.45)),
           overlayColor: MaterialStateProperty.all<Color>(Colors.white10),
         ),
       ),
@@ -120,7 +119,7 @@ class XThemeData {
         size: 22,
       ),
       navigationRailTheme: NavigationRailThemeData(
-        backgroundColor: Colors.white.darker(0.25),
+        backgroundColor: Colors.white.darker(0.15),
         selectedIconTheme: IconThemeData(color: kRedXefi.darker(0.1)),
         unselectedIconTheme: IconThemeData(color: Colors.white),
         labelType: NavigationRailLabelType.none,
@@ -135,14 +134,14 @@ class XThemeData {
         // shape:AutomaticNotchedShape() ,
       ),
       bannerTheme: MaterialBannerThemeData(
-        backgroundColor: Colors.white.darker(0.3),
+        backgroundColor: Colors.white.darker(0.15),
         contentTextStyle: kTextStyle,
         // leadingPadding: ,
         // padding: ,
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white.darker(0.3),
+        backgroundColor: Colors.white.darker(0.15),
         elevation: 4,
         selectedIconTheme: IconThemeData(color: kRedXefi.darker(0.2), size: 22),
         selectedItemColor: kRedXefi.darker(0.2),
@@ -154,20 +153,20 @@ class XThemeData {
         showUnselectedLabels: true,
       ),
       buttonTheme: ButtonThemeData(
-        buttonColor: Colors.white.darker(0.4),
+        buttonColor: Colors.white.darker(0.25),
         splashColor: Colors.white24,
         textTheme: ButtonTextTheme.normal,
         // shape: ,
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
-        backgroundColor: Colors.white.darker(0.3),
+        backgroundColor: Colors.white.darker(0.15),
         elevation: 4,
         splashColor: Colors.white24,
         foregroundColor: kRedXefi.darker(0.2),
       ),
       chipTheme: ChipThemeData(
         selectedColor: kRedXefi.darker(0.2),
-        disabledColor: Colors.white.darker(0.4),
+        disabledColor: Colors.white.darker(0.25),
         brightness: Brightness.dark,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
@@ -176,23 +175,23 @@ class XThemeData {
         ),
         backgroundColor: Colors.transparent,
         padding: EdgeInsets.all(4),
-        secondarySelectedColor: Colors.white.darker(0.5),
+        secondarySelectedColor: Colors.white.darker(0.35),
         secondaryLabelStyle: kTextStyle,
         labelStyle: kTextStyle,
         elevation: 4,
       ),
       bottomSheetTheme: BottomSheetThemeData(
-        backgroundColor: Colors.white.darker(0.5),
+        backgroundColor: Colors.white.darker(0.35),
         elevation: 4,
-        modalBackgroundColor: Colors.white.darker(0.4),
+        modalBackgroundColor: Colors.white.darker(0.25),
         modalElevation: 4,
         // shape: ,
       ),
       sliderTheme: SliderThemeData(
         activeTrackColor: kRedXefi.darker(0.2),
-        activeTickMarkColor: Colors.white.darker(0.2),
-        inactiveTrackColor: Colors.white.darker(0.4),
-        inactiveTickMarkColor: Colors.white.darker(0.5),
+        activeTickMarkColor: Colors.white.darker(0.075),
+        inactiveTrackColor: Colors.white.darker(0.25),
+        inactiveTickMarkColor: Colors.white.darker(0.35),
         overlayColor: kRedXefi.darker(0.2),
         thumbColor: kRedXefi.darker(0.2),
         trackHeight: 10,
@@ -200,14 +199,14 @@ class XThemeData {
       ),
       snackBarTheme: SnackBarThemeData(
         actionTextColor: kTextStyle.color,
-        backgroundColor: Colors.white.darker(0.3),
+        backgroundColor: Colors.white.darker(0.15),
         contentTextStyle: kTextStyle,
         elevation: 4,
         // shape: ,
       ),
       tabBarTheme: TabBarTheme(
         indicator: BoxDecoration(
-          color: Colors.white.darker(0.3),
+          color: Colors.white.darker(0.15),
         ),
         indicatorSize: TabBarIndicatorSize.tab,
         labelColor: kTextStyle.color,
@@ -217,36 +216,36 @@ class XThemeData {
       ),
       dataTableTheme: DataTableThemeData(
         headingRowHeight: 20,
-        headingRowColor: MaterialStateProperty.all(Colors.white.darker(0.5)),
+        headingRowColor: MaterialStateProperty.all(Colors.white.darker(0.35)),
         headingTextStyle: kTitleStyle,
-        dataRowColor: MaterialStateProperty.all(Colors.white.darker(0.4)),
+        dataRowColor: MaterialStateProperty.all(Colors.white.darker(0.25)),
         dataTextStyle: kTextStyle,
         columnSpacing: 20,
         dataRowHeight: 50,
         dividerThickness: 3,
       ),
       timePickerTheme: TimePickerThemeData(
-        backgroundColor: Colors.white.darker(0.3),
-        dayPeriodColor: Colors.white.darker(0.5),
+        backgroundColor: Colors.white.darker(0.15),
+        dayPeriodColor: Colors.white.darker(0.35),
         dayPeriodTextColor: kTextStyle.color,
         dayPeriodTextStyle: kTitleStyle,
-        dialBackgroundColor: Colors.white.darker(0.4),
+        dialBackgroundColor: Colors.white.darker(0.25),
         helpTextStyle: kTextStyle,
         dialTextColor: kTextStyle.color,
         entryModeIconColor: Colors.white,
-        hourMinuteColor: Colors.white.darker(0.5),
+        hourMinuteColor: Colors.white.darker(0.35),
         hourMinuteTextStyle: kTextStyle,
         hourMinuteTextColor: kTextStyle.color,
       ),
       dividerTheme: DividerThemeData(
-        color: Colors.white.darker(0.3),
+        color: Colors.white.darker(0.15),
         endIndent: 5,
         indent: 5,
         space: 5,
         thickness: 5,
       ),
       popupMenuTheme: PopupMenuThemeData(
-        color: Colors.white.darker(0.4),
+        color: Colors.white.darker(0.25),
         elevation: 4,
         // shape: ,
         textStyle: kTextStyle,
@@ -254,7 +253,7 @@ class XThemeData {
       tooltipTheme: TooltipThemeData(
         // height: 30,
         decoration: BoxDecoration(
-          color: Colors.white.darker(0.5),
+          color: Colors.white.darker(0.35),
           borderRadius: BorderRadius.circular(20),
         ),
         textStyle: kTextStyle,

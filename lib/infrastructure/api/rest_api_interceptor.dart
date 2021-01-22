@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
@@ -9,16 +11,16 @@ class RestApiInterceptor extends RestApiLogger {
     debugPrint(
         "REQUEST[${options.method}] => PATH: ${options.baseUrl}${options.path}");
 
-    // if (options.data is FormData) {
-    //   debugPrint((options.data as FormData).fields.toString());
-    // } else {
-    //   if (options.method == 'POST' ||
-    //       options.method == 'PUT' ||
-    //       options.method == 'PATCH') {
-    //     var jsonData = json.encode(options.data);
-    //     debugPrint(jsonData);
-    //   }
-    // }
+    if (options.data is FormData) {
+      debugPrint((options.data as FormData).fields.toString());
+    } else {
+      if (options.method == 'POST' ||
+          options.method == 'PUT' ||
+          options.method == 'PATCH') {
+        var jsonData = json.encode(options.data);
+        debugPrint(jsonData);
+      }
+    }
 
     return options;
   }

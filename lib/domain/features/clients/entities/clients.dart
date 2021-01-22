@@ -7,7 +7,9 @@ class Clients implements EntityFactory<Clients, ClientsDto> {
   String last;
   String street;
   String city;
-  String zip;
+  int zip;
+
+  String get fulllname => "$first ${last.toUpperCase()}";
 
   Clients({
     this.guid,
@@ -24,7 +26,7 @@ class Clients implements EntityFactory<Clients, ClientsDto> {
     String last,
     String street,
     String city,
-    String zip,
+    int zip,
   }) {
     return Clients(
       guid: guid ?? this.guid,

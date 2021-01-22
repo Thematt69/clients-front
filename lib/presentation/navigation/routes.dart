@@ -3,5 +3,5 @@ class Routes {
     return HOME;
   }
 
-  static const HOME = '/home';
+  static const HOME = '/';
 }

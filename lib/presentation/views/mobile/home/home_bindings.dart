@@ -10,24 +10,18 @@ import 'home_controller.dart';
 class HomeControllerBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<EntityFactory>(() => Clients());
-    Get.lazyPut<ClientsDtoFactory>(() => ClientsDtoFactory());
-    Get.lazyPut(
-      () => ClientsRepositoryImp(
-        client: Get.find<RestApiClient>().client,
-        clientsDtoFactory: Get.find<ClientsDtoFactory>(),
-      ),
-    );
-    Get.lazyPut(
-      () => ClientsController(
-        clients: Get.find<EntityFactory>(),
-        clientsRepository: Get.find<ClientsRepositoryImp>(),
-      ),
-    );
-    Get.lazyPut<HomeController>(
-      () => HomeController(
-        clientsController: Get.find<ClientsController>(),
-      ),
-    );
+    Get.put<EntityFactory>(Clients());
+    Get.put(ClientsDtoFactory());
+    Get.put(ClientsRepositoryImp(
+      client: Get.find<RestApiClient>().client,
+      dtoFactory: Get.find<ClientsDtoFactory>(),
+    ));
+    Get.put(ClientsController(
+      clients: Get.find<EntityFactory>(),
+      clientsRepository: Get.find<ClientsRepositoryImp>(),
+    ));
+    Get.put(HomeController(
+      clientsController: Get.find<ClientsController>(),
+    ));
   }
 }

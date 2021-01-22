@@ -20,10 +20,30 @@ abstract class ControllerFactory<E, D> {
       queryParameters: queryParameters,
     );
 
-    var response = RestApiResponse<List<E>>(
-      data: result.data.map<E>((e) => entityFactory.fromDto(e)).toList(),
+    return RestApiResponse<List<E>>(
+      data: result.data
+          .map<E>(
+            (e) => entityFactory.fromDto(e),
+          )
+          .toList(),
+    );
+  }
+
+  Future<RestApiResponse<List<E>>> show({
+    @required dynamic value,
+    Map<String, dynamic> queryParameters,
+  }) async {
+    var result = await repository.show(
+      value: value,
+      queryParameters: queryParameters,
     );
 
-    return response;
+    return RestApiResponse<List<E>>(
+      data: result.data
+          .map<E>(
+            (e) => entityFactory.fromDto(e),
+          )
+          .toList(),
+    );
   }
 }

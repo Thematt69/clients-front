@@ -17,12 +17,33 @@ abstract class RestApiRepositoryFactory<D> extends RestApiRepository {
   }) async {
     var response = await client.get(
       '$controller',
+      queryParameters: queryParameters,
     );
 
     return RestApiResponse<List<D>>(
-      data: response.data.map<D>((e) {
-        return dtoFactory.fromJson(e);
-      }).toList(),
+      data: response.data.map<D>(
+        (e) {
+          return dtoFactory.fromJson(e);
+        },
+      ).toList(),
+    );
+  }
+
+  Future<RestApiResponse<List<D>>> show({
+    @required dynamic value,
+    Map<String, dynamic> queryParameters,
+  }) async {
+    var response = await client.get(
+      '$controller/$value',
+      queryParameters: queryParameters,
+    );
+
+    return RestApiResponse<List<D>>(
+      data: response.data.map<D>(
+        (e) {
+          return dtoFactory.fromJson(e);
+        },
+      ).toList(),
     );
   }
 }

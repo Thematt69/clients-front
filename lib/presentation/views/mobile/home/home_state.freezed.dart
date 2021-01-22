@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'loading_state.dart';
+part of 'home_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -10,8 +10,8 @@ part of 'loading_state.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-class _$LoadingStateTearOff {
-  const _$LoadingStateTearOff();
+class _$HomeStateTearOff {
+  const _$HomeStateTearOff();
 
 // ignore: unused_element
   Initial initial({String message}) {
@@ -44,10 +44,10 @@ class _$LoadingStateTearOff {
 
 /// @nodoc
 // ignore: unused_element
-const $LoadingState = _$LoadingStateTearOff();
+const $HomeState = _$HomeStateTearOff();
 
 /// @nodoc
-mixin _$LoadingState {
+mixin _$HomeState {
   String get message;
 
   @optionalTypeArgs
@@ -82,24 +82,23 @@ mixin _$LoadingState {
   });
 
   @JsonKey(ignore: true)
-  $LoadingStateCopyWith<LoadingState> get copyWith;
+  $HomeStateCopyWith<HomeState> get copyWith;
 }
 
 /// @nodoc
-abstract class $LoadingStateCopyWith<$Res> {
-  factory $LoadingStateCopyWith(
-          LoadingState value, $Res Function(LoadingState) then) =
-      _$LoadingStateCopyWithImpl<$Res>;
+abstract class $HomeStateCopyWith<$Res> {
+  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
+      _$HomeStateCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
 /// @nodoc
-class _$LoadingStateCopyWithImpl<$Res> implements $LoadingStateCopyWith<$Res> {
-  _$LoadingStateCopyWithImpl(this._value, this._then);
+class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
+  _$HomeStateCopyWithImpl(this._value, this._then);
 
-  final LoadingState _value;
+  final HomeState _value;
   // ignore: unused_field
-  final $Res Function(LoadingState) _then;
+  final $Res Function(HomeState) _then;
 
   @override
   $Res call({
@@ -112,7 +111,7 @@ class _$LoadingStateCopyWithImpl<$Res> implements $LoadingStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $InitialCopyWith<$Res> implements $LoadingStateCopyWith<$Res> {
+abstract class $InitialCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
   factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
       _$InitialCopyWithImpl<$Res>;
   @override
@@ -120,7 +119,7 @@ abstract class $InitialCopyWith<$Res> implements $LoadingStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res> extends _$LoadingStateCopyWithImpl<$Res>
+class _$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
     implements $InitialCopyWith<$Res> {
   _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
       : super(_value, (v) => _then(v as Initial));
@@ -147,7 +146,7 @@ class _$Initial implements Initial {
 
   @override
   String toString() {
-    return 'LoadingState.initial(message: $message)';
+    return 'HomeState.initial(message: $message)';
   }
 
   @override
@@ -230,7 +229,7 @@ class _$Initial implements Initial {
   }
 }
 
-abstract class Initial implements LoadingState {
+abstract class Initial implements HomeState {
   const factory Initial({String message}) = _$Initial;
 
   @override
@@ -241,7 +240,7 @@ abstract class Initial implements LoadingState {
 }
 
 /// @nodoc
-abstract class $LoadingCopyWith<$Res> implements $LoadingStateCopyWith<$Res> {
+abstract class $LoadingCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
   factory $LoadingCopyWith(Loading value, $Res Function(Loading) then) =
       _$LoadingCopyWithImpl<$Res>;
   @override
@@ -249,7 +248,7 @@ abstract class $LoadingCopyWith<$Res> implements $LoadingStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<$Res> extends _$LoadingStateCopyWithImpl<$Res>
+class _$LoadingCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
     implements $LoadingCopyWith<$Res> {
   _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
       : super(_value, (v) => _then(v as Loading));
@@ -276,7 +275,7 @@ class _$Loading implements Loading {
 
   @override
   String toString() {
-    return 'LoadingState.loading(message: $message)';
+    return 'HomeState.loading(message: $message)';
   }
 
   @override
@@ -359,7 +358,7 @@ class _$Loading implements Loading {
   }
 }
 
-abstract class Loading implements LoadingState {
+abstract class Loading implements HomeState {
   const factory Loading({String message}) = _$Loading;
 
   @override
@@ -370,7 +369,7 @@ abstract class Loading implements LoadingState {
 }
 
 /// @nodoc
-abstract class $LoadedCopyWith<$Res> implements $LoadingStateCopyWith<$Res> {
+abstract class $LoadedCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
   factory $LoadedCopyWith(Loaded value, $Res Function(Loaded) then) =
       _$LoadedCopyWithImpl<$Res>;
   @override
@@ -378,7 +377,7 @@ abstract class $LoadedCopyWith<$Res> implements $LoadingStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LoadedCopyWithImpl<$Res> extends _$LoadingStateCopyWithImpl<$Res>
+class _$LoadedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
     implements $LoadedCopyWith<$Res> {
   _$LoadedCopyWithImpl(Loaded _value, $Res Function(Loaded) _then)
       : super(_value, (v) => _then(v as Loaded));
@@ -405,7 +404,7 @@ class _$Loaded implements Loaded {
 
   @override
   String toString() {
-    return 'LoadingState.loaded(message: $message)';
+    return 'HomeState.loaded(message: $message)';
   }
 
   @override
@@ -488,7 +487,7 @@ class _$Loaded implements Loaded {
   }
 }
 
-abstract class Loaded implements LoadingState {
+abstract class Loaded implements HomeState {
   const factory Loaded({String message}) = _$Loaded;
 
   @override
@@ -499,7 +498,7 @@ abstract class Loaded implements LoadingState {
 }
 
 /// @nodoc
-abstract class $ErrorCopyWith<$Res> implements $LoadingStateCopyWith<$Res> {
+abstract class $ErrorCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
   factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
       _$ErrorCopyWithImpl<$Res>;
   @override
@@ -507,7 +506,7 @@ abstract class $ErrorCopyWith<$Res> implements $LoadingStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ErrorCopyWithImpl<$Res> extends _$LoadingStateCopyWithImpl<$Res>
+class _$ErrorCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
     implements $ErrorCopyWith<$Res> {
   _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
       : super(_value, (v) => _then(v as Error));
@@ -534,7 +533,7 @@ class _$Error implements Error {
 
   @override
   String toString() {
-    return 'LoadingState.error(message: $message)';
+    return 'HomeState.error(message: $message)';
   }
 
   @override
@@ -617,7 +616,7 @@ class _$Error implements Error {
   }
 }
 
-abstract class Error implements LoadingState {
+abstract class Error implements HomeState {
   const factory Error({String message}) = _$Error;
 
   @override

@@ -1,36 +1,48 @@
 import 'package:clients/domain/core/entities/entities.exports.dart';
 import 'package:clients/domain/features/clients/controllers/clients_controller.dart';
-import 'package:clients/presentation/core/loading_state.dart';
+import 'package:clients/presentation/views/mobile/home/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  RxBool isCancel = false.obs;
-  RxList<Clients> clientsList = <Clients>[].obs;
   final ClientsController clientsController;
-
-  Rx<LoadingState> loadingState = LoadingState.initial().obs;
 
   HomeController({
     @required this.clientsController,
   });
 
+  Rx<HomeState> state = HomeState.initial().obs;
+  RxBool isCancel = false.obs;
+  RxList<Clients> clientsList = <Clients>[].obs;
+  TextEditingController textController = TextEditingController();
+  String recherche = "";
+
   @override
   Future<void> onInit() async {
     try {
-      loadingState.value = LoadingState.loading();
+      state.value = HomeState.loading();
 
       clientsList.addAll((await clientsController.index()).data);
 
-      loadingState.value = LoadingState.loaded();
+      textController.text = "";
+
+      state.value = HomeState.loaded();
     } catch (e) {
-      loadingState.value = LoadingState.error(message: e);
+      state.value = HomeState.error(message: e);
     }
     super.onInit();
   }
 
   @override
   void onReady() async {
+    textController.addListener(() async {
+      if (textController.text != "" && textController.text != recherche) {
+        recherche = textController.text;
+        clientsList.clear();
+        clientsList.addAll(
+            (await clientsController.show(value: textController.text)).data);
+      }
+    });
     super.onReady();
   }
 
@@ -39,8 +51,23 @@ class HomeController extends GetxController {
     super.onClose();
   }
 
+  @override
   Future<void> refresh() async {
-    clientsList.clear();
-    clientsList.addAll((await clientsController.index()).data);
+    try {
+      state.value = HomeState.loading();
+
+      clientsList.clear();
+      if (textController.text != "") {
+        clientsList.addAll(
+            (await clientsController.show(value: textController.text)).data);
+      } else {
+        clientsList.addAll((await clientsController.index()).data);
+      }
+
+      state.value = HomeState.loaded();
+    } catch (e) {
+      state.value = HomeState.error(message: e);
+    }
+    super.refresh();
   }
 }

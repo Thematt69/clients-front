@@ -3,13 +3,16 @@ import 'package:clients/infrastructure/dtos/dtos.exports.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-class ClientsRepositoryImp extends ClientsRepository {
+import 'rest_api_repository_factory.dart';
+
+class ClientsRepositoryImp extends RestApiRepositoryFactory<ClientsDto>
+    implements ClientsRepository {
   ClientsRepositoryImp({
     @required Dio client,
-    @required ClientsDtoFactory clientsDtoFactory,
+    @required ClientsDtoFactory dtoFactory,
   }) : super(
           client: client,
           controller: "/client",
-          dtoFactory: clientsDtoFactory,
+          dtoFactory: dtoFactory,
         );
 }
