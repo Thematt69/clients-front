@@ -1,30 +1,30 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'clients_dto.dart';
+part of 'client_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-ClientsDto _$ClientsDtoFromJson(Map<String, dynamic> json) {
-  return _ClientsDto.fromJson(json);
+ClientDto _$ClientDtoFromJson(Map<String, dynamic> json) {
+  return _ClientDto.fromJson(json);
 }
 
 /// @nodoc
-class _$ClientsDtoTearOff {
-  const _$ClientsDtoTearOff();
+class _$ClientDtoTearOff {
+  const _$ClientDtoTearOff();
 
 // ignore: unused_element
-  _ClientsDto call(
+  _ClientDto call(
       {@JsonKey(name: 'guid') String guid,
       @JsonKey(name: 'first') String first,
       @JsonKey(name: 'last') String last,
       @JsonKey(name: 'street') String street,
       @JsonKey(name: 'city') String city,
       @JsonKey(name: 'zip') int zip}) {
-    return _ClientsDto(
+    return _ClientDto(
       guid: guid,
       first: first,
       last: last,
@@ -35,17 +35,17 @@ class _$ClientsDtoTearOff {
   }
 
 // ignore: unused_element
-  ClientsDto fromJson(Map<String, Object> json) {
-    return ClientsDto.fromJson(json);
+  ClientDto fromJson(Map<String, Object> json) {
+    return ClientDto.fromJson(json);
   }
 }
 
 /// @nodoc
 // ignore: unused_element
-const $ClientsDto = _$ClientsDtoTearOff();
+const $ClientDto = _$ClientDtoTearOff();
 
 /// @nodoc
-mixin _$ClientsDto {
+mixin _$ClientDto {
   @JsonKey(name: 'guid')
   String get guid;
   @JsonKey(name: 'first')
@@ -61,14 +61,13 @@ mixin _$ClientsDto {
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
-  $ClientsDtoCopyWith<ClientsDto> get copyWith;
+  $ClientDtoCopyWith<ClientDto> get copyWith;
 }
 
 /// @nodoc
-abstract class $ClientsDtoCopyWith<$Res> {
-  factory $ClientsDtoCopyWith(
-          ClientsDto value, $Res Function(ClientsDto) then) =
-      _$ClientsDtoCopyWithImpl<$Res>;
+abstract class $ClientDtoCopyWith<$Res> {
+  factory $ClientDtoCopyWith(ClientDto value, $Res Function(ClientDto) then) =
+      _$ClientDtoCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'guid') String guid,
       @JsonKey(name: 'first') String first,
@@ -79,12 +78,12 @@ abstract class $ClientsDtoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ClientsDtoCopyWithImpl<$Res> implements $ClientsDtoCopyWith<$Res> {
-  _$ClientsDtoCopyWithImpl(this._value, this._then);
+class _$ClientDtoCopyWithImpl<$Res> implements $ClientDtoCopyWith<$Res> {
+  _$ClientDtoCopyWithImpl(this._value, this._then);
 
-  final ClientsDto _value;
+  final ClientDto _value;
   // ignore: unused_field
-  final $Res Function(ClientsDto) _then;
+  final $Res Function(ClientDto) _then;
 
   @override
   $Res call({
@@ -107,10 +106,10 @@ class _$ClientsDtoCopyWithImpl<$Res> implements $ClientsDtoCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ClientsDtoCopyWith<$Res> implements $ClientsDtoCopyWith<$Res> {
-  factory _$ClientsDtoCopyWith(
-          _ClientsDto value, $Res Function(_ClientsDto) then) =
-      __$ClientsDtoCopyWithImpl<$Res>;
+abstract class _$ClientDtoCopyWith<$Res> implements $ClientDtoCopyWith<$Res> {
+  factory _$ClientDtoCopyWith(
+          _ClientDto value, $Res Function(_ClientDto) then) =
+      __$ClientDtoCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'guid') String guid,
@@ -122,14 +121,13 @@ abstract class _$ClientsDtoCopyWith<$Res> implements $ClientsDtoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ClientsDtoCopyWithImpl<$Res> extends _$ClientsDtoCopyWithImpl<$Res>
-    implements _$ClientsDtoCopyWith<$Res> {
-  __$ClientsDtoCopyWithImpl(
-      _ClientsDto _value, $Res Function(_ClientsDto) _then)
-      : super(_value, (v) => _then(v as _ClientsDto));
+class __$ClientDtoCopyWithImpl<$Res> extends _$ClientDtoCopyWithImpl<$Res>
+    implements _$ClientDtoCopyWith<$Res> {
+  __$ClientDtoCopyWithImpl(_ClientDto _value, $Res Function(_ClientDto) _then)
+      : super(_value, (v) => _then(v as _ClientDto));
 
   @override
-  _ClientsDto get _value => super._value as _ClientsDto;
+  _ClientDto get _value => super._value as _ClientDto;
 
   @override
   $Res call({
@@ -140,7 +138,7 @@ class __$ClientsDtoCopyWithImpl<$Res> extends _$ClientsDtoCopyWithImpl<$Res>
     Object city = freezed,
     Object zip = freezed,
   }) {
-    return _then(_ClientsDto(
+    return _then(_ClientDto(
       guid: guid == freezed ? _value.guid : guid as String,
       first: first == freezed ? _value.first : first as String,
       last: last == freezed ? _value.last : last as String,
@@ -154,8 +152,8 @@ class __$ClientsDtoCopyWithImpl<$Res> extends _$ClientsDtoCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_ClientsDto implements _ClientsDto {
-  const _$_ClientsDto(
+class _$_ClientDto implements _ClientDto {
+  const _$_ClientDto(
       {@JsonKey(name: 'guid') this.guid,
       @JsonKey(name: 'first') this.first,
       @JsonKey(name: 'last') this.last,
@@ -163,8 +161,8 @@ class _$_ClientsDto implements _ClientsDto {
       @JsonKey(name: 'city') this.city,
       @JsonKey(name: 'zip') this.zip});
 
-  factory _$_ClientsDto.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClientsDtoFromJson(json);
+  factory _$_ClientDto.fromJson(Map<String, dynamic> json) =>
+      _$_$_ClientDtoFromJson(json);
 
   @override
   @JsonKey(name: 'guid')
@@ -187,13 +185,13 @@ class _$_ClientsDto implements _ClientsDto {
 
   @override
   String toString() {
-    return 'ClientsDto(guid: $guid, first: $first, last: $last, street: $street, city: $city, zip: $zip)';
+    return 'ClientDto(guid: $guid, first: $first, last: $last, street: $street, city: $city, zip: $zip)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ClientsDto &&
+        (other is _ClientDto &&
             (identical(other.guid, guid) ||
                 const DeepCollectionEquality().equals(other.guid, guid)) &&
             (identical(other.first, first) ||
@@ -220,26 +218,26 @@ class _$_ClientsDto implements _ClientsDto {
 
   @JsonKey(ignore: true)
   @override
-  _$ClientsDtoCopyWith<_ClientsDto> get copyWith =>
-      __$ClientsDtoCopyWithImpl<_ClientsDto>(this, _$identity);
+  _$ClientDtoCopyWith<_ClientDto> get copyWith =>
+      __$ClientDtoCopyWithImpl<_ClientDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClientsDtoToJson(this);
+    return _$_$_ClientDtoToJson(this);
   }
 }
 
-abstract class _ClientsDto implements ClientsDto {
-  const factory _ClientsDto(
+abstract class _ClientDto implements ClientDto {
+  const factory _ClientDto(
       {@JsonKey(name: 'guid') String guid,
       @JsonKey(name: 'first') String first,
       @JsonKey(name: 'last') String last,
       @JsonKey(name: 'street') String street,
       @JsonKey(name: 'city') String city,
-      @JsonKey(name: 'zip') int zip}) = _$_ClientsDto;
+      @JsonKey(name: 'zip') int zip}) = _$_ClientDto;
 
-  factory _ClientsDto.fromJson(Map<String, dynamic> json) =
-      _$_ClientsDto.fromJson;
+  factory _ClientDto.fromJson(Map<String, dynamic> json) =
+      _$_ClientDto.fromJson;
 
   @override
   @JsonKey(name: 'guid')
@@ -261,5 +259,5 @@ abstract class _ClientsDto implements ClientsDto {
   int get zip;
   @override
   @JsonKey(ignore: true)
-  _$ClientsDtoCopyWith<_ClientsDto> get copyWith;
+  _$ClientDtoCopyWith<_ClientDto> get copyWith;
 }

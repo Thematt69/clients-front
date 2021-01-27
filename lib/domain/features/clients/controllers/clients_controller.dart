@@ -4,9 +4,9 @@ import 'package:clients/domain/features/clients/repositories/clients_repository.
 import 'package:clients/infrastructure/dtos/dtos.exports.dart';
 import 'package:flutter/material.dart';
 
-class ClientsController extends ControllerFactory<Clients, ClientsDto> {
+class ClientsController extends ControllerFactory<Client, ClientDto> {
   ClientsController({
-    @required Clients clients,
+    @required Client clients,
     @required ClientsRepository clientsRepository,
   }) : super(repository: clientsRepository, entityFactory: clients);
 }

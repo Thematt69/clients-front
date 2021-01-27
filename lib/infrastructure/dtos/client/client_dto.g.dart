@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'clients_dto.dart';
+part of 'client_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ClientsDto _$_$_ClientsDtoFromJson(Map<String, dynamic> json) {
-  return _$_ClientsDto(
+_$_ClientDto _$_$_ClientDtoFromJson(Map<String, dynamic> json) {
+  return _$_ClientDto(
     guid: json['guid'] as String,
     first: json['first'] as String,
     last: json['last'] as String,
@@ -17,7 +17,7 @@ _$_ClientsDto _$_$_ClientsDtoFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_ClientsDtoToJson(_$_ClientsDto instance) =>
+Map<String, dynamic> _$_$_ClientDtoToJson(_$_ClientDto instance) =>
     <String, dynamic>{
       'guid': instance.guid,
       'first': instance.first,

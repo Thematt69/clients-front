@@ -10,11 +10,11 @@ import 'home_controller.dart';
 class HomeControllerBinding extends Bindings {
   @override
   void dependencies() {
-    Get.put<EntityFactory>(Clients());
-    Get.put(ClientsDtoFactory());
+    Get.put<EntityFactory>(Client());
+    Get.put(ClientDtoFactory());
     Get.put(ClientsRepositoryImp(
       client: Get.find<RestApiClient>().client,
-      dtoFactory: Get.find<ClientsDtoFactory>(),
+      dtoFactory: Get.find<ClientDtoFactory>(),
     ));
     Get.put(ClientsController(
       clients: Get.find<EntityFactory>(),

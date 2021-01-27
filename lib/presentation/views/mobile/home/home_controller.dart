@@ -13,14 +13,17 @@ class HomeController extends GetxController {
 
   Rx<HomeState> state = HomeState.initial().obs;
   RxBool isCancel = false.obs;
-  RxList<Clients> clientsList = <Clients>[].obs;
+  RxList<Client> clientsList = <Client>[].obs;
   TextEditingController textController = TextEditingController();
   String recherche = "";
+  ScrollController scrollController;
 
   @override
   Future<void> onInit() async {
     try {
       state.value = HomeState.loading();
+
+      scrollController = ScrollController();
 
       clientsList.addAll((await clientsController.index()).data);
 
@@ -38,6 +41,7 @@ class HomeController extends GetxController {
     textController.addListener(() async {
       if (textController.text != "" && textController.text != recherche) {
         recherche = textController.text;
+
         clientsList.clear();
         clientsList.addAll(
             (await clientsController.show(value: textController.text)).data);

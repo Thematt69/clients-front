@@ -1,3 +1,5 @@
+import 'package:clients/infrastructure/environment/env.dart';
+import 'package:clients/presentation/core/widgets/x_gradient_divider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -10,20 +12,43 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        leading: Obx(
+          () {
+            return Tooltip(
+              message: "Adresse de l'api : ${Get.find<Env>().kBaseUrl}",
+              child: Icon(controller.state.value.maybeWhen(
+                loaded: (message) => MdiIcons.databaseCheckOutline,
+                error: (message) => MdiIcons.databaseRemoveOutline,
+                orElse: () => MdiIcons.databaseSyncOutline,
+              )),
+            );
+          },
+        ),
         title: Text('Listing des clients'),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            tooltip: 'Changer le thème',
+            icon: Icon(MdiIcons.themeLightDark),
+            onPressed: () {
+              Get.changeThemeMode(
+                Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,
+              );
+            },
+          ),
+        ],
       ),
       body: _buildContent(context),
       floatingActionButton: FloatingActionButton(
-        tooltip: "Changer le thème",
-        child: Icon(
-          Get.isDarkMode
-              ? MdiIcons.whiteBalanceSunny
-              : MdiIcons.moonWaningCrescent,
-        ),
+        tooltip: "Revenir en haut",
+        child: Icon(MdiIcons.arrowUp),
         onPressed: () {
-          Get.changeThemeMode(
-            Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,
+          controller.scrollController.animateTo(
+            0,
+            duration: Duration(
+              milliseconds: 200,
+            ),
+            curve: Curves.linear,
           );
         },
       ),
@@ -61,8 +86,28 @@ class HomeView extends GetView<HomeController> {
             loaded: (_) => _buildList(context),
             error: (message) {
               return Center(
-                child: Text(
-                  'Une erreur est survenu.\nMessage d\'erreur : $message',
+                child: Column(
+                  children: [
+                    Text(
+                      'Une erreur est survenu.',
+                    ),
+                    Text(
+                      'Message d\'erreur : $message',
+                    ),
+                    ElevatedButton(
+                      onPressed: () async {
+                        await controller.refresh();
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            Get.theme.accentColor),
+                      ),
+                      child: Text(
+                        'Réessayer',
+                        style: Get.theme.textTheme.headline2,
+                      ),
+                    ),
+                  ],
                 ),
               );
             },
@@ -92,47 +137,49 @@ class HomeView extends GetView<HomeController> {
               child: controller.clientsList.isNotEmpty
                   ? RefreshIndicator(
                       onRefresh: () => controller.refresh(),
-                      child: ListView.builder(
+                      child: ListView.separated(
+                        controller: controller.scrollController,
                         itemCount: controller.clientsList.length,
+                        separatorBuilder: (context, index) {
+                          return XGradientDivider.white();
+                        },
                         itemBuilder: (context, index) {
-                          return Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8),
-                              child: Row(
-                                children: [
-                                  Expanded(
-                                    child: Text(
-                                      controller.clientsList[index].first,
-                                      textAlign: TextAlign.center,
-                                    ),
+                          return Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    controller.clientsList[index].first,
+                                    textAlign: TextAlign.center,
                                   ),
-                                  Expanded(
-                                    child: Text(
-                                      controller.clientsList[index].last,
-                                      textAlign: TextAlign.center,
-                                    ),
+                                ),
+                                Expanded(
+                                  child: Text(
+                                    controller.clientsList[index].last,
+                                    textAlign: TextAlign.center,
                                   ),
-                                  Expanded(
-                                    child: Text(
-                                      controller.clientsList[index].street,
-                                      textAlign: TextAlign.center,
-                                    ),
+                                ),
+                                Expanded(
+                                  child: Text(
+                                    controller.clientsList[index].street,
+                                    textAlign: TextAlign.center,
                                   ),
-                                  Expanded(
-                                    child: Text(
-                                      controller.clientsList[index].city,
-                                      textAlign: TextAlign.center,
-                                    ),
+                                ),
+                                Expanded(
+                                  child: Text(
+                                    controller.clientsList[index].city,
+                                    textAlign: TextAlign.center,
                                   ),
-                                  Expanded(
-                                    child: Text(
-                                      controller.clientsList[index].zip
-                                          .toString(),
-                                      textAlign: TextAlign.center,
-                                    ),
+                                ),
+                                Expanded(
+                                  child: Text(
+                                    controller.clientsList[index].zip
+                                        .toString(),
+                                    textAlign: TextAlign.center,
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           );
                         },

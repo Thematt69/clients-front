@@ -1,7 +1,7 @@
 import '../../../../infrastructure/dtos/dtos.exports.dart';
 import '../../../core/entities/entity_factory.dart';
 
-class Clients implements EntityFactory<Clients, ClientsDto> {
+class Client implements EntityFactory<Client, ClientDto> {
   String guid;
   String first;
   String last;
@@ -11,7 +11,7 @@ class Clients implements EntityFactory<Clients, ClientsDto> {
 
   String get fulllname => "$first ${last.toUpperCase()}";
 
-  Clients({
+  Client({
     this.guid,
     this.first,
     this.last,
@@ -20,7 +20,7 @@ class Clients implements EntityFactory<Clients, ClientsDto> {
     this.zip,
   });
 
-  Clients copyWith({
+  Client copyWith({
     String guid,
     String first,
     String last,
@@ -28,7 +28,7 @@ class Clients implements EntityFactory<Clients, ClientsDto> {
     String city,
     int zip,
   }) {
-    return Clients(
+    return Client(
       guid: guid ?? this.guid,
       first: first ?? this.first,
       last: last ?? this.last,
@@ -39,8 +39,8 @@ class Clients implements EntityFactory<Clients, ClientsDto> {
   }
 
   @override
-  Clients fromDto(ClientsDto dto) {
-    return Clients(
+  Client fromDto(ClientDto dto) {
+    return Client(
       guid: dto.guid,
       first: dto.first,
       last: dto.last,
@@ -51,8 +51,8 @@ class Clients implements EntityFactory<Clients, ClientsDto> {
   }
 
   @override
-  ClientsDto toDto(Clients entity) {
-    return ClientsDto(
+  ClientDto toDto(Client entity) {
+    return ClientDto(
       guid: entity.guid,
       first: entity.first,
       last: entity.last,
