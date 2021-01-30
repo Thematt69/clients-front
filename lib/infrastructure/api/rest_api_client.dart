@@ -10,9 +10,10 @@ class RestApiClient {
   RestApiClient({
     RestApiInterceptor restApiInterceptor,
   }) {
-    client.options.baseUrl = Get.find<Env>().kBaseUrl;
+    client.options.baseUrl = Get.find<Env>().url;
     client.options.receiveTimeout = 15000;
     client.options.connectTimeout = 15000;
+    client.options.sendTimeout = 15000;
     client.interceptors.add(restApiInterceptor);
   }
 }

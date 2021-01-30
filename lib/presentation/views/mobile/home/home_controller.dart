@@ -31,7 +31,7 @@ class HomeController extends GetxController {
 
       state.value = HomeState.loaded();
     } catch (e) {
-      state.value = HomeState.error(message: e);
+      state.value = HomeState.error();
     }
     super.onInit();
   }
@@ -51,11 +51,6 @@ class HomeController extends GetxController {
   }
 
   @override
-  void onClose() {
-    super.onClose();
-  }
-
-  @override
   Future<void> refresh() async {
     try {
       state.value = HomeState.loading();
@@ -70,8 +65,14 @@ class HomeController extends GetxController {
 
       state.value = HomeState.loaded();
     } catch (e) {
-      state.value = HomeState.error(message: e);
+      state.value = HomeState.error();
     }
     super.refresh();
+  }
+
+  @override
+  void onClose() {
+    // TODO: implement onClose
+    super.onClose();
   }
 }

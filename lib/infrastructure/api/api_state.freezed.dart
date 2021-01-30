@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'home_state.dart';
+part of 'api_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -10,8 +10,8 @@ part of 'home_state.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-class _$HomeStateTearOff {
-  const _$HomeStateTearOff();
+class _$ApiStateTearOff {
+  const _$ApiStateTearOff();
 
 // ignore: unused_element
   Initial initial() {
@@ -19,13 +19,13 @@ class _$HomeStateTearOff {
   }
 
 // ignore: unused_element
-  Loading loading() {
-    return const Loading();
+  Connecting connecting() {
+    return const Connecting();
   }
 
 // ignore: unused_element
-  Loaded loaded() {
-    return const Loaded();
+  Connected connected() {
+    return const Connected();
   }
 
 // ignore: unused_element
@@ -36,55 +36,55 @@ class _$HomeStateTearOff {
 
 /// @nodoc
 // ignore: unused_element
-const $HomeState = _$HomeStateTearOff();
+const $ApiState = _$ApiStateTearOff();
 
 /// @nodoc
-mixin _$HomeState {
+mixin _$ApiState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult loading(),
-    @required TResult loaded(),
+    @required TResult connecting(),
+    @required TResult connected(),
     @required TResult error(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult loading(),
-    TResult loaded(),
+    TResult connecting(),
+    TResult connected(),
     TResult error(),
     @required TResult orElse(),
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(Initial value),
-    @required TResult loading(Loading value),
-    @required TResult loaded(Loaded value),
+    @required TResult connecting(Connecting value),
+    @required TResult connected(Connected value),
     @required TResult error(Error value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(Initial value),
-    TResult loading(Loading value),
-    TResult loaded(Loaded value),
+    TResult connecting(Connecting value),
+    TResult connected(Connected value),
     TResult error(Error value),
     @required TResult orElse(),
   });
 }
 
 /// @nodoc
-abstract class $HomeStateCopyWith<$Res> {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
-      _$HomeStateCopyWithImpl<$Res>;
+abstract class $ApiStateCopyWith<$Res> {
+  factory $ApiStateCopyWith(ApiState value, $Res Function(ApiState) then) =
+      _$ApiStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
-  _$HomeStateCopyWithImpl(this._value, this._then);
+class _$ApiStateCopyWithImpl<$Res> implements $ApiStateCopyWith<$Res> {
+  _$ApiStateCopyWithImpl(this._value, this._then);
 
-  final HomeState _value;
+  final ApiState _value;
   // ignore: unused_field
-  final $Res Function(HomeState) _then;
+  final $Res Function(ApiState) _then;
 }
 
 /// @nodoc
@@ -94,7 +94,7 @@ abstract class $InitialCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+class _$InitialCopyWithImpl<$Res> extends _$ApiStateCopyWithImpl<$Res>
     implements $InitialCopyWith<$Res> {
   _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
       : super(_value, (v) => _then(v as Initial));
@@ -109,7 +109,7 @@ class _$Initial implements Initial {
 
   @override
   String toString() {
-    return 'HomeState.initial()';
+    return 'ApiState.initial()';
   }
 
   @override
@@ -124,13 +124,13 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult loading(),
-    @required TResult loaded(),
+    @required TResult connecting(),
+    @required TResult connected(),
     @required TResult error(),
   }) {
     assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
+    assert(connecting != null);
+    assert(connected != null);
     assert(error != null);
     return initial();
   }
@@ -139,8 +139,8 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult loading(),
-    TResult loaded(),
+    TResult connecting(),
+    TResult connected(),
     TResult error(),
     @required TResult orElse(),
   }) {
@@ -155,13 +155,13 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(Initial value),
-    @required TResult loading(Loading value),
-    @required TResult loaded(Loaded value),
+    @required TResult connecting(Connecting value),
+    @required TResult connected(Connected value),
     @required TResult error(Error value),
   }) {
     assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
+    assert(connecting != null);
+    assert(connected != null);
     assert(error != null);
     return initial(this);
   }
@@ -170,8 +170,8 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(Initial value),
-    TResult loading(Loading value),
-    TResult loaded(Loaded value),
+    TResult connecting(Connecting value),
+    TResult connected(Connected value),
     TResult error(Error value),
     @required TResult orElse(),
   }) {
@@ -183,38 +183,39 @@ class _$Initial implements Initial {
   }
 }
 
-abstract class Initial implements HomeState {
+abstract class Initial implements ApiState {
   const factory Initial() = _$Initial;
 }
 
 /// @nodoc
-abstract class $LoadingCopyWith<$Res> {
-  factory $LoadingCopyWith(Loading value, $Res Function(Loading) then) =
-      _$LoadingCopyWithImpl<$Res>;
+abstract class $ConnectingCopyWith<$Res> {
+  factory $ConnectingCopyWith(
+          Connecting value, $Res Function(Connecting) then) =
+      _$ConnectingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
-    implements $LoadingCopyWith<$Res> {
-  _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
-      : super(_value, (v) => _then(v as Loading));
+class _$ConnectingCopyWithImpl<$Res> extends _$ApiStateCopyWithImpl<$Res>
+    implements $ConnectingCopyWith<$Res> {
+  _$ConnectingCopyWithImpl(Connecting _value, $Res Function(Connecting) _then)
+      : super(_value, (v) => _then(v as Connecting));
 
   @override
-  Loading get _value => super._value as Loading;
+  Connecting get _value => super._value as Connecting;
 }
 
 /// @nodoc
-class _$Loading implements Loading {
-  const _$Loading();
+class _$Connecting implements Connecting {
+  const _$Connecting();
 
   @override
   String toString() {
-    return 'HomeState.loading()';
+    return 'ApiState.connecting()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is Loading);
+    return identical(this, other) || (other is Connecting);
   }
 
   @override
@@ -224,29 +225,29 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult loading(),
-    @required TResult loaded(),
+    @required TResult connecting(),
+    @required TResult connected(),
     @required TResult error(),
   }) {
     assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
+    assert(connecting != null);
+    assert(connected != null);
     assert(error != null);
-    return loading();
+    return connecting();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult loading(),
-    TResult loaded(),
+    TResult connecting(),
+    TResult connected(),
     TResult error(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (loading != null) {
-      return loading();
+    if (connecting != null) {
+      return connecting();
     }
     return orElse();
   }
@@ -255,66 +256,66 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(Initial value),
-    @required TResult loading(Loading value),
-    @required TResult loaded(Loaded value),
+    @required TResult connecting(Connecting value),
+    @required TResult connected(Connected value),
     @required TResult error(Error value),
   }) {
     assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
+    assert(connecting != null);
+    assert(connected != null);
     assert(error != null);
-    return loading(this);
+    return connecting(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(Initial value),
-    TResult loading(Loading value),
-    TResult loaded(Loaded value),
+    TResult connecting(Connecting value),
+    TResult connected(Connected value),
     TResult error(Error value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (loading != null) {
-      return loading(this);
+    if (connecting != null) {
+      return connecting(this);
     }
     return orElse();
   }
 }
 
-abstract class Loading implements HomeState {
-  const factory Loading() = _$Loading;
+abstract class Connecting implements ApiState {
+  const factory Connecting() = _$Connecting;
 }
 
 /// @nodoc
-abstract class $LoadedCopyWith<$Res> {
-  factory $LoadedCopyWith(Loaded value, $Res Function(Loaded) then) =
-      _$LoadedCopyWithImpl<$Res>;
+abstract class $ConnectedCopyWith<$Res> {
+  factory $ConnectedCopyWith(Connected value, $Res Function(Connected) then) =
+      _$ConnectedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
-    implements $LoadedCopyWith<$Res> {
-  _$LoadedCopyWithImpl(Loaded _value, $Res Function(Loaded) _then)
-      : super(_value, (v) => _then(v as Loaded));
+class _$ConnectedCopyWithImpl<$Res> extends _$ApiStateCopyWithImpl<$Res>
+    implements $ConnectedCopyWith<$Res> {
+  _$ConnectedCopyWithImpl(Connected _value, $Res Function(Connected) _then)
+      : super(_value, (v) => _then(v as Connected));
 
   @override
-  Loaded get _value => super._value as Loaded;
+  Connected get _value => super._value as Connected;
 }
 
 /// @nodoc
-class _$Loaded implements Loaded {
-  const _$Loaded();
+class _$Connected implements Connected {
+  const _$Connected();
 
   @override
   String toString() {
-    return 'HomeState.loaded()';
+    return 'ApiState.connected()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is Loaded);
+    return identical(this, other) || (other is Connected);
   }
 
   @override
@@ -324,29 +325,29 @@ class _$Loaded implements Loaded {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult loading(),
-    @required TResult loaded(),
+    @required TResult connecting(),
+    @required TResult connected(),
     @required TResult error(),
   }) {
     assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
+    assert(connecting != null);
+    assert(connected != null);
     assert(error != null);
-    return loaded();
+    return connected();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult loading(),
-    TResult loaded(),
+    TResult connecting(),
+    TResult connected(),
     TResult error(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (loaded != null) {
-      return loaded();
+    if (connected != null) {
+      return connected();
     }
     return orElse();
   }
@@ -355,36 +356,36 @@ class _$Loaded implements Loaded {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(Initial value),
-    @required TResult loading(Loading value),
-    @required TResult loaded(Loaded value),
+    @required TResult connecting(Connecting value),
+    @required TResult connected(Connected value),
     @required TResult error(Error value),
   }) {
     assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
+    assert(connecting != null);
+    assert(connected != null);
     assert(error != null);
-    return loaded(this);
+    return connected(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(Initial value),
-    TResult loading(Loading value),
-    TResult loaded(Loaded value),
+    TResult connecting(Connecting value),
+    TResult connected(Connected value),
     TResult error(Error value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (loaded != null) {
-      return loaded(this);
+    if (connected != null) {
+      return connected(this);
     }
     return orElse();
   }
 }
 
-abstract class Loaded implements HomeState {
-  const factory Loaded() = _$Loaded;
+abstract class Connected implements ApiState {
+  const factory Connected() = _$Connected;
 }
 
 /// @nodoc
@@ -394,7 +395,7 @@ abstract class $ErrorCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ErrorCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+class _$ErrorCopyWithImpl<$Res> extends _$ApiStateCopyWithImpl<$Res>
     implements $ErrorCopyWith<$Res> {
   _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
       : super(_value, (v) => _then(v as Error));
@@ -409,7 +410,7 @@ class _$Error implements Error {
 
   @override
   String toString() {
-    return 'HomeState.error()';
+    return 'ApiState.error()';
   }
 
   @override
@@ -424,13 +425,13 @@ class _$Error implements Error {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult loading(),
-    @required TResult loaded(),
+    @required TResult connecting(),
+    @required TResult connected(),
     @required TResult error(),
   }) {
     assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
+    assert(connecting != null);
+    assert(connected != null);
     assert(error != null);
     return error();
   }
@@ -439,8 +440,8 @@ class _$Error implements Error {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult loading(),
-    TResult loaded(),
+    TResult connecting(),
+    TResult connected(),
     TResult error(),
     @required TResult orElse(),
   }) {
@@ -455,13 +456,13 @@ class _$Error implements Error {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(Initial value),
-    @required TResult loading(Loading value),
-    @required TResult loaded(Loaded value),
+    @required TResult connecting(Connecting value),
+    @required TResult connected(Connected value),
     @required TResult error(Error value),
   }) {
     assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
+    assert(connecting != null);
+    assert(connected != null);
     assert(error != null);
     return error(this);
   }
@@ -470,8 +471,8 @@ class _$Error implements Error {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(Initial value),
-    TResult loading(Loading value),
-    TResult loaded(Loaded value),
+    TResult connecting(Connecting value),
+    TResult connected(Connected value),
     TResult error(Error value),
     @required TResult orElse(),
   }) {
@@ -483,6 +484,6 @@ class _$Error implements Error {
   }
 }
 
-abstract class Error implements HomeState {
+abstract class Error implements ApiState {
   const factory Error() = _$Error;
 }

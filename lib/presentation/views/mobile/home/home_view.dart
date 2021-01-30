@@ -1,4 +1,5 @@
-import 'package:clients/infrastructure/environment/env.dart';
+import 'package:clients/presentation/core/widgets/x_drawer.dart';
+import 'package:clients/presentation/core/widgets/x_error_page.dart';
 import 'package:clients/presentation/core/widgets/x_gradient_divider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,32 +12,10 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: XDrawer(),
       appBar: AppBar(
-        leading: Obx(
-          () {
-            return Tooltip(
-              message: "Adresse de l'api : ${Get.find<Env>().kBaseUrl}",
-              child: Icon(controller.state.value.maybeWhen(
-                loaded: (message) => MdiIcons.databaseCheckOutline,
-                error: (message) => MdiIcons.databaseRemoveOutline,
-                orElse: () => MdiIcons.databaseSyncOutline,
-              )),
-            );
-          },
-        ),
         title: Text('Listing des clients'),
         centerTitle: true,
-        actions: [
-          IconButton(
-            tooltip: 'Changer le thème',
-            icon: Icon(MdiIcons.themeLightDark),
-            onPressed: () {
-              Get.changeThemeMode(
-                Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,
-              );
-            },
-          ),
-        ],
       ),
       body: _buildContent(context),
       floatingActionButton: FloatingActionButton(
@@ -79,36 +58,14 @@ class HomeView extends GetView<HomeController> {
         ),
         Obx(
           () => controller.state.value.when(
-            initial: (_) => SizedBox(),
-            loading: (_) => Center(
+            initial: () => SizedBox(),
+            loading: () => Center(
               child: LinearProgressIndicator(),
             ),
-            loaded: (_) => _buildList(context),
-            error: (message) {
-              return Center(
-                child: Column(
-                  children: [
-                    Text(
-                      'Une erreur est survenu.',
-                    ),
-                    Text(
-                      'Message d\'erreur : $message',
-                    ),
-                    ElevatedButton(
-                      onPressed: () async {
-                        await controller.refresh();
-                      },
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Get.theme.accentColor),
-                      ),
-                      child: Text(
-                        'Réessayer',
-                        style: Get.theme.textTheme.headline2,
-                      ),
-                    ),
-                  ],
-                ),
+            loaded: () => _buildList(context),
+            error: () {
+              return XErrorPage(
+                refresh: controller.refresh,
               );
             },
           ),

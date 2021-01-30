@@ -9,6 +9,11 @@ class Nav {
       name: Routes.HOME,
       page: () => mobile.HomeView(),
       binding: mobile.HomeControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.SETTING,
+      page: () => mobile.SettingView(),
+      binding: mobile.SettingControllerBinding(),
     )
   ];
 }

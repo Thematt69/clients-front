@@ -1,15 +1,16 @@
 import 'dart:convert';
-
+import 'package:clients/infrastructure/api/api_state.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-
+import 'package:get/get_rx/get_rx.dart';
 import 'rest_api_logger.dart';
 
 class RestApiInterceptor extends RestApiLogger {
+  Rx<ApiState> state = ApiState.initial().obs;
+
   @override
   Future onRequest(RequestOptions options) async {
-    debugPrint(
-        "REQUEST[${options.method}] => PATH: ${options.baseUrl}${options.path}");
+    state.value = ApiState.connecting();
 
     if (options.data is FormData) {
       debugPrint((options.data as FormData).fields.toString());
@@ -27,15 +28,13 @@ class RestApiInterceptor extends RestApiLogger {
 
   @override
   Future onResponse(Response response) async {
-    debugPrint(
-        "RESPONSE[${response.statusCode}] => PATH: ${response.request.path}");
+    state.value = ApiState.connected();
     return response;
   }
 
   @override
   Future onError(DioError err) async {
-    print("ERROR[${err.response?.statusCode}] => PATH: ${err.request.path}");
-    print("ERROR[${err.response?.statusCode}] => PATH: ${err.response?.data}");
+    state.value = ApiState.error();
     return super.onError(err);
   }
 }
