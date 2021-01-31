@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 
 class Env extends GetxService {
+// TODO - Créer une entité
+
   // String ip = "127.0.0.1";
   String ip = "192.168.1.100";
 
