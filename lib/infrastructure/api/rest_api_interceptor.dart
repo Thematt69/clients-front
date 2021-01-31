@@ -10,8 +10,10 @@ class RestApiInterceptor extends RestApiLogger {
 
   @override
   Future onRequest(RequestOptions options) async {
+// TODO - Ajouter once() et si passer par erreur refaire la connexion
     state.value = ApiState.connecting();
 
+// TODO - Enlever
     if (options.data is FormData) {
       debugPrint((options.data as FormData).fields.toString());
     } else {
@@ -22,6 +24,7 @@ class RestApiInterceptor extends RestApiLogger {
         debugPrint(jsonData);
       }
     }
+// TODO - Fin Enlever
 
     return options;
   }
