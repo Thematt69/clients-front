@@ -32,6 +32,21 @@ class _$SettingStateTearOff {
   Error error() {
     return const Error();
   }
+
+// ignore: unused_element
+  Testing testing() {
+    return const Testing();
+  }
+
+// ignore: unused_element
+  TestSuccess testSuccess() {
+    return const TestSuccess();
+  }
+
+// ignore: unused_element
+  TestError testError() {
+    return const TestError();
+  }
 }
 
 /// @nodoc
@@ -46,6 +61,9 @@ mixin _$SettingState {
     @required TResult loading(),
     @required TResult loaded(),
     @required TResult error(),
+    @required TResult testing(),
+    @required TResult testSuccess(),
+    @required TResult testError(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -53,6 +71,9 @@ mixin _$SettingState {
     TResult loading(),
     TResult loaded(),
     TResult error(),
+    TResult testing(),
+    TResult testSuccess(),
+    TResult testError(),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -61,6 +82,9 @@ mixin _$SettingState {
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
     @required TResult error(Error value),
+    @required TResult testing(Testing value),
+    @required TResult testSuccess(TestSuccess value),
+    @required TResult testError(TestError value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
@@ -68,6 +92,9 @@ mixin _$SettingState {
     TResult loading(Loading value),
     TResult loaded(Loaded value),
     TResult error(Error value),
+    TResult testing(Testing value),
+    TResult testSuccess(TestSuccess value),
+    TResult testError(TestError value),
     @required TResult orElse(),
   });
 }
@@ -128,11 +155,17 @@ class _$Initial implements Initial {
     @required TResult loading(),
     @required TResult loaded(),
     @required TResult error(),
+    @required TResult testing(),
+    @required TResult testSuccess(),
+    @required TResult testError(),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
     return initial();
   }
 
@@ -143,6 +176,9 @@ class _$Initial implements Initial {
     TResult loading(),
     TResult loaded(),
     TResult error(),
+    TResult testing(),
+    TResult testSuccess(),
+    TResult testError(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -159,11 +195,17 @@ class _$Initial implements Initial {
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
     @required TResult error(Error value),
+    @required TResult testing(Testing value),
+    @required TResult testSuccess(TestSuccess value),
+    @required TResult testError(TestError value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
     return initial(this);
   }
 
@@ -174,6 +216,9 @@ class _$Initial implements Initial {
     TResult loading(Loading value),
     TResult loaded(Loaded value),
     TResult error(Error value),
+    TResult testing(Testing value),
+    TResult testSuccess(TestSuccess value),
+    TResult testError(TestError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -228,11 +273,17 @@ class _$Loading implements Loading {
     @required TResult loading(),
     @required TResult loaded(),
     @required TResult error(),
+    @required TResult testing(),
+    @required TResult testSuccess(),
+    @required TResult testError(),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
     return loading();
   }
 
@@ -243,6 +294,9 @@ class _$Loading implements Loading {
     TResult loading(),
     TResult loaded(),
     TResult error(),
+    TResult testing(),
+    TResult testSuccess(),
+    TResult testError(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -259,11 +313,17 @@ class _$Loading implements Loading {
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
     @required TResult error(Error value),
+    @required TResult testing(Testing value),
+    @required TResult testSuccess(TestSuccess value),
+    @required TResult testError(TestError value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
     return loading(this);
   }
 
@@ -274,6 +334,9 @@ class _$Loading implements Loading {
     TResult loading(Loading value),
     TResult loaded(Loaded value),
     TResult error(Error value),
+    TResult testing(Testing value),
+    TResult testSuccess(TestSuccess value),
+    TResult testError(TestError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -328,11 +391,17 @@ class _$Loaded implements Loaded {
     @required TResult loading(),
     @required TResult loaded(),
     @required TResult error(),
+    @required TResult testing(),
+    @required TResult testSuccess(),
+    @required TResult testError(),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
     return loaded();
   }
 
@@ -343,6 +412,9 @@ class _$Loaded implements Loaded {
     TResult loading(),
     TResult loaded(),
     TResult error(),
+    TResult testing(),
+    TResult testSuccess(),
+    TResult testError(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -359,11 +431,17 @@ class _$Loaded implements Loaded {
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
     @required TResult error(Error value),
+    @required TResult testing(Testing value),
+    @required TResult testSuccess(TestSuccess value),
+    @required TResult testError(TestError value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
     return loaded(this);
   }
 
@@ -374,6 +452,9 @@ class _$Loaded implements Loaded {
     TResult loading(Loading value),
     TResult loaded(Loaded value),
     TResult error(Error value),
+    TResult testing(Testing value),
+    TResult testSuccess(TestSuccess value),
+    TResult testError(TestError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -428,11 +509,17 @@ class _$Error implements Error {
     @required TResult loading(),
     @required TResult loaded(),
     @required TResult error(),
+    @required TResult testing(),
+    @required TResult testSuccess(),
+    @required TResult testError(),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
     return error();
   }
 
@@ -443,6 +530,9 @@ class _$Error implements Error {
     TResult loading(),
     TResult loaded(),
     TResult error(),
+    TResult testing(),
+    TResult testSuccess(),
+    TResult testError(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -459,11 +549,17 @@ class _$Error implements Error {
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
     @required TResult error(Error value),
+    @required TResult testing(Testing value),
+    @required TResult testSuccess(TestSuccess value),
+    @required TResult testError(TestError value),
   }) {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
     assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
     return error(this);
   }
 
@@ -474,6 +570,9 @@ class _$Error implements Error {
     TResult loading(Loading value),
     TResult loaded(Loaded value),
     TResult error(Error value),
+    TResult testing(Testing value),
+    TResult testSuccess(TestSuccess value),
+    TResult testError(TestError value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -486,4 +585,360 @@ class _$Error implements Error {
 
 abstract class Error implements SettingState {
   const factory Error() = _$Error;
+}
+
+/// @nodoc
+abstract class $TestingCopyWith<$Res> {
+  factory $TestingCopyWith(Testing value, $Res Function(Testing) then) =
+      _$TestingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$TestingCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
+    implements $TestingCopyWith<$Res> {
+  _$TestingCopyWithImpl(Testing _value, $Res Function(Testing) _then)
+      : super(_value, (v) => _then(v as Testing));
+
+  @override
+  Testing get _value => super._value as Testing;
+}
+
+/// @nodoc
+class _$Testing implements Testing {
+  const _$Testing();
+
+  @override
+  String toString() {
+    return 'SettingState.testing()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is Testing);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult loaded(),
+    @required TResult error(),
+    @required TResult testing(),
+    @required TResult testSuccess(),
+    @required TResult testError(),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(loaded != null);
+    assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
+    return testing();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult loaded(),
+    TResult error(),
+    TResult testing(),
+    TResult testSuccess(),
+    TResult testError(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (testing != null) {
+      return testing();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(Initial value),
+    @required TResult loading(Loading value),
+    @required TResult loaded(Loaded value),
+    @required TResult error(Error value),
+    @required TResult testing(Testing value),
+    @required TResult testSuccess(TestSuccess value),
+    @required TResult testError(TestError value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(loaded != null);
+    assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
+    return testing(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(Initial value),
+    TResult loading(Loading value),
+    TResult loaded(Loaded value),
+    TResult error(Error value),
+    TResult testing(Testing value),
+    TResult testSuccess(TestSuccess value),
+    TResult testError(TestError value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (testing != null) {
+      return testing(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Testing implements SettingState {
+  const factory Testing() = _$Testing;
+}
+
+/// @nodoc
+abstract class $TestSuccessCopyWith<$Res> {
+  factory $TestSuccessCopyWith(
+          TestSuccess value, $Res Function(TestSuccess) then) =
+      _$TestSuccessCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$TestSuccessCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
+    implements $TestSuccessCopyWith<$Res> {
+  _$TestSuccessCopyWithImpl(
+      TestSuccess _value, $Res Function(TestSuccess) _then)
+      : super(_value, (v) => _then(v as TestSuccess));
+
+  @override
+  TestSuccess get _value => super._value as TestSuccess;
+}
+
+/// @nodoc
+class _$TestSuccess implements TestSuccess {
+  const _$TestSuccess();
+
+  @override
+  String toString() {
+    return 'SettingState.testSuccess()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is TestSuccess);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult loaded(),
+    @required TResult error(),
+    @required TResult testing(),
+    @required TResult testSuccess(),
+    @required TResult testError(),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(loaded != null);
+    assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
+    return testSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult loaded(),
+    TResult error(),
+    TResult testing(),
+    TResult testSuccess(),
+    TResult testError(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (testSuccess != null) {
+      return testSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(Initial value),
+    @required TResult loading(Loading value),
+    @required TResult loaded(Loaded value),
+    @required TResult error(Error value),
+    @required TResult testing(Testing value),
+    @required TResult testSuccess(TestSuccess value),
+    @required TResult testError(TestError value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(loaded != null);
+    assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
+    return testSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(Initial value),
+    TResult loading(Loading value),
+    TResult loaded(Loaded value),
+    TResult error(Error value),
+    TResult testing(Testing value),
+    TResult testSuccess(TestSuccess value),
+    TResult testError(TestError value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (testSuccess != null) {
+      return testSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TestSuccess implements SettingState {
+  const factory TestSuccess() = _$TestSuccess;
+}
+
+/// @nodoc
+abstract class $TestErrorCopyWith<$Res> {
+  factory $TestErrorCopyWith(TestError value, $Res Function(TestError) then) =
+      _$TestErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$TestErrorCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
+    implements $TestErrorCopyWith<$Res> {
+  _$TestErrorCopyWithImpl(TestError _value, $Res Function(TestError) _then)
+      : super(_value, (v) => _then(v as TestError));
+
+  @override
+  TestError get _value => super._value as TestError;
+}
+
+/// @nodoc
+class _$TestError implements TestError {
+  const _$TestError();
+
+  @override
+  String toString() {
+    return 'SettingState.testError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is TestError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult loaded(),
+    @required TResult error(),
+    @required TResult testing(),
+    @required TResult testSuccess(),
+    @required TResult testError(),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(loaded != null);
+    assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
+    return testError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult loaded(),
+    TResult error(),
+    TResult testing(),
+    TResult testSuccess(),
+    TResult testError(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (testError != null) {
+      return testError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(Initial value),
+    @required TResult loading(Loading value),
+    @required TResult loaded(Loaded value),
+    @required TResult error(Error value),
+    @required TResult testing(Testing value),
+    @required TResult testSuccess(TestSuccess value),
+    @required TResult testError(TestError value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(loaded != null);
+    assert(error != null);
+    assert(testing != null);
+    assert(testSuccess != null);
+    assert(testError != null);
+    return testError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(Initial value),
+    TResult loading(Loading value),
+    TResult loaded(Loaded value),
+    TResult error(Error value),
+    TResult testing(Testing value),
+    TResult testSuccess(TestSuccess value),
+    TResult testError(TestError value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (testError != null) {
+      return testError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TestError implements SettingState {
+  const factory TestError() = _$TestError;
 }

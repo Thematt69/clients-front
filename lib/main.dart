@@ -1,8 +1,7 @@
-import 'package:clients/infrastructure/environment/env.dart';
 import 'package:clients/presentation/core/styles/theme_datas.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'domain/core/entities/entities.exports.dart';
 import 'infrastructure/api/rest_api_client.dart';
 import 'infrastructure/api/rest_api_interceptor.dart';
 import 'presentation/navigation/navigation.dart';
@@ -10,7 +9,7 @@ import 'presentation/navigation/routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await initServices();
+  initServices();
   var initialRoute = await Routes.initialRoute;
   runApp(
     GetMaterialApp(
@@ -23,10 +22,10 @@ void main() async {
   );
 }
 
-Future<void> initServices() async {
-  print('starting services ...');
+void initServices() {
+  debugPrint('Starting services ...');
 
-  Get.put(Env());
+  Get.put(Setting());
 
   Get.put(
     RestApiClient(
@@ -36,5 +35,5 @@ Future<void> initServices() async {
     ),
   );
 
-  print('All services started...');
+  debugPrint('All services started...');
 }

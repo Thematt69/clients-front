@@ -8,4 +8,7 @@ abstract class SettingState with _$SettingState {
   const factory SettingState.loading() = Loading;
   const factory SettingState.loaded() = Loaded;
   const factory SettingState.error() = Error;
+  const factory SettingState.testing() = Testing;
+  const factory SettingState.testSuccess() = TestSuccess;
+  const factory SettingState.testError() = TestError;
 }

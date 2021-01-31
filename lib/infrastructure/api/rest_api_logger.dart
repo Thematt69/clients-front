@@ -18,8 +18,10 @@ class RestApiLogger extends Interceptor {
 
   @override
   Future onError(DioError err) async {
-    print("ERROR[${err.response?.statusCode}] => PATH: ${err.request.path}");
-    print("ERROR[${err.response?.statusCode}] => PATH: ${err.response?.data}");
+    debugPrint(
+        "ERROR[${err.response?.statusCode}] => PATH: ${err.request.path}");
+    debugPrint(
+        "ERROR[${err.response?.statusCode}] => PATH: ${err.response?.data}");
     return err;
   }
 }

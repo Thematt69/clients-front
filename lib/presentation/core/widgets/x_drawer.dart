@@ -1,3 +1,4 @@
+import 'package:clients/domain/core/entities/entities.exports.dart';
 import 'package:clients/infrastructure/api/rest_api_interceptor.dart';
 import 'package:clients/presentation/navigation/routes.dart';
 import 'package:flutter/material.dart';
@@ -16,20 +17,23 @@ class XDrawer extends GetView {
           ),
           Obx(
             () {
-              return ListTile(
-                title: Text(
-                  Get.find<RestApiInterceptor>().state.value.maybeWhen(
-                        connected: () => 'Connecté',
-                        error: () => 'Échec de connexion',
-                        orElse: () => 'Connexion en cours...',
-                      ),
-                ),
-                leading: Icon(
-                  Get.find<RestApiInterceptor>().state.value.maybeWhen(
-                        connected: () => MdiIcons.databaseCheckOutline,
-                        error: () => MdiIcons.databaseRemoveOutline,
-                        orElse: () => MdiIcons.databaseSyncOutline,
-                      ),
+              return Tooltip(
+                message: Get.find<Setting>().url,
+                child: ListTile(
+                  title: Text(
+                    Get.find<RestApiInterceptor>().state.value.maybeWhen(
+                          connected: () => 'Connecté',
+                          error: () => 'Échec de connexion',
+                          orElse: () => 'Connexion en cours...',
+                        ),
+                  ),
+                  leading: Icon(
+                    Get.find<RestApiInterceptor>().state.value.maybeWhen(
+                          connected: () => MdiIcons.databaseCheckOutline,
+                          error: () => MdiIcons.databaseRemoveOutline,
+                          orElse: () => MdiIcons.databaseSyncOutline,
+                        ),
+                  ),
                 ),
               );
             },
@@ -41,7 +45,7 @@ class XDrawer extends GetView {
             leading: Icon(MdiIcons.databaseCogOutline),
             title: Text('Changer l\'adresse IP'),
             onTap: () {
-              Get.toNamed(Routes.SETTING);
+              Get.offAllNamed(Routes.SETTING);
             },
           ),
           ListTile(

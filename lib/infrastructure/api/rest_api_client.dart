@@ -1,4 +1,4 @@
-import 'package:clients/infrastructure/environment/env.dart';
+import 'package:clients/domain/features/setting/entities/setting.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 
@@ -10,10 +10,14 @@ class RestApiClient {
   RestApiClient({
     RestApiInterceptor restApiInterceptor,
   }) {
-    client.options.baseUrl = Get.find<Env>().url;
-    client.options.receiveTimeout = 15000;
-    client.options.connectTimeout = 15000;
-    client.options.sendTimeout = 15000;
+    client.options.baseUrl = Get.find<Setting>().url;
+    client.options.receiveTimeout = 5000;
+    client.options.connectTimeout = 5000;
+    client.options.sendTimeout = 5000;
     client.interceptors.add(restApiInterceptor);
+  }
+
+  void changeUrl() {
+    client.options.baseUrl = Get.find<Setting>().url;
   }
 }

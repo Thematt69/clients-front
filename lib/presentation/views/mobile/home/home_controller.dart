@@ -14,7 +14,7 @@ class HomeController extends GetxController {
   Rx<HomeState> state = HomeState.initial().obs;
   RxBool isCancel = false.obs;
   RxList<Client> clientsList = <Client>[].obs;
-  TextEditingController textController = TextEditingController();
+  TextEditingController textController;
   String recherche = "";
   ScrollController scrollController;
 
@@ -24,10 +24,9 @@ class HomeController extends GetxController {
       state.value = HomeState.loading();
 
       scrollController = ScrollController();
+      textController = TextEditingController(text: "");
 
       clientsList.addAll((await clientsController.index()).data);
-
-      textController.text = "";
 
       state.value = HomeState.loaded();
     } catch (e) {
@@ -39,7 +38,7 @@ class HomeController extends GetxController {
   @override
   void onReady() async {
     textController.addListener(() async {
-      if (textController.text != "" && textController.text != recherche) {
+      if (textController.text != recherche) {
         recherche = textController.text;
 
         clientsList.clear();
@@ -72,7 +71,7 @@ class HomeController extends GetxController {
 
   @override
   void onClose() {
-    // TODO: implement onClose
+    textController.dispose();
     super.onClose();
   }
 }
