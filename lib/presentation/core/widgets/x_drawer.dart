@@ -13,7 +13,7 @@ class XDrawer extends GetView {
         children: [
           SizedBox(height: MediaQuery.of(context).padding.top),
           ListTile(
-            title: Text('État du serveur'),
+            title: Text('serverState'.tr),
           ),
           Obx(
             () {
@@ -22,9 +22,9 @@ class XDrawer extends GetView {
                 child: ListTile(
                   title: Text(
                     Get.find<RestApiInterceptor>().state.value.maybeWhen(
-                          connected: () => 'Connecté',
-                          error: () => 'Échec de connexion',
-                          orElse: () => 'Connexion en cours...',
+                          connected: () => 'connected'.tr,
+                          error: () => 'connectionFailure'.tr,
+                          orElse: () => 'currentConnecion'.tr,
                         ),
                   ),
                   leading: Icon(
@@ -39,18 +39,18 @@ class XDrawer extends GetView {
             },
           ),
           ListTile(
-            title: Text('Paramètrages'),
+            title: Text('settings'.tr),
           ),
           ListTile(
             leading: Icon(MdiIcons.databaseCogOutline),
-            title: Text('Changer l\'adresse IP'),
+            title: Text('changeIpAddress'.tr),
             onTap: () {
               Get.offAllNamed(Routes.SETTING);
             },
           ),
           ListTile(
             leading: Icon(MdiIcons.themeLightDark),
-            title: Text('Changer le thème'),
+            title: Text('changeTheme'.tr),
             onTap: () {
               Get.changeThemeMode(
                 Get.isDarkMode ? ThemeMode.light : ThemeMode.dark,

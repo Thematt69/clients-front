@@ -1,5 +1,5 @@
 import 'package:clients/presentation/core/widgets/x_drawer.dart';
-import 'package:clients/presentation/core/widgets/x_error_page.dart';
+import 'package:clients/presentation/navigation/routes.dart';
 import 'package:clients/presentation/views/mobile/setting/setting_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -11,21 +11,16 @@ class SettingView extends GetView<SettingController> {
     return Scaffold(
       drawer: XDrawer(),
       appBar: AppBar(
-        title: Text('Listing des clients'),
+        title: Text('appTitle'.tr),
         centerTitle: true,
       ),
       body: Obx(
         () => controller.state.value.maybeWhen(
           initial: () => SizedBox(),
           loading: () => Center(
-            child: LinearProgressIndicator(),
+            child: CircularProgressIndicator(),
           ),
           orElse: () => _buildContent(),
-          error: () {
-            return XErrorPage(
-              refresh: controller.refresh,
-            );
-          },
         ),
       ),
     );
@@ -42,18 +37,18 @@ class SettingView extends GetView<SettingController> {
               controller: controller.textEditingController,
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                labelText: 'Adresse IP',
+                labelText: 'ipAdress'.tr,
               ),
             ),
             SizedBox(height: 10),
             Obx(
               () => controller.state.value.maybeWhen(
-                testing: () => Text('Test de connexion...',
+                testing: () => Text('testConnexion'.tr,
                     style: Get.theme.textTheme.headline2),
-                testSuccess: () => Text('Test effectué avec succés',
+                testSuccess: () => Text('testSuccess'.tr,
                     style: Get.theme.textTheme.headline2),
                 testError: () => Text(
-                  'Test échoué !',
+                  'testFailed'.tr,
                   style: Get.theme.textTheme.headline2
                       .copyWith(color: Get.theme.accentColor),
                 ),
@@ -61,9 +56,19 @@ class SettingView extends GetView<SettingController> {
               ),
             ),
             SizedBox(height: 10),
-            ElevatedButton(
-              child: Text('Enregistrer'),
-              onPressed: () async => await controller.testingIp(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  child: Text('cancel'.tr),
+                  onPressed: () => Get.offAllNamed(Routes.HOME),
+                ),
+                SizedBox(width: 10),
+                ElevatedButton(
+                  child: Text('save'.tr),
+                  onPressed: () async => await controller.testingIp(),
+                ),
+              ],
             ),
             // TODO - Voir pour avoir un historique des précédentes adresses utilisées
           ],

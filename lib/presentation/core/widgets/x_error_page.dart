@@ -8,7 +8,7 @@ class XErrorPage extends GetView {
 
   XErrorPage({
     @required this.refresh,
-    this.message = "Erreur inconnue",
+    this.message,
   });
 
   @override
@@ -19,8 +19,8 @@ class XErrorPage extends GetView {
         children: [
           Text(
             Get.find<RestApiInterceptor>().state.value.maybeWhen(
-                  error: () => "Erreur de connexion au serveur",
-                  orElse: () => message,
+                  error: () => 'connectionServerError'.tr,
+                  orElse: () => message ?? 'unknownError'.tr,
                 ),
             style: Get.theme.textTheme.headline1,
           ),
@@ -34,7 +34,7 @@ class XErrorPage extends GetView {
                   MaterialStateProperty.all<Color>(Get.theme.accentColor),
             ),
             child: Text(
-              'Recharger la page',
+              'reload'.tr,
               style: Get.theme.textTheme.headline2,
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:clients/presentation/core/styles/theme_datas.dart';
+import 'package:clients/presentation/core/translations/translations.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'domain/core/entities/entities.exports.dart';
@@ -13,17 +14,19 @@ void main() async {
   var initialRoute = await Routes.initialRoute;
   runApp(
     GetMaterialApp(
-      title: 'Listing clients',
+      title: 'appTitle'.tr,
       initialRoute: initialRoute,
       getPages: Nav.routes,
       theme: XThemeData.light(),
       darkTheme: XThemeData.dark(),
+      translations: Traduction(),
+      locale: Locale('fr', 'FR'),
     ),
   );
 }
 
 void initServices() {
-  debugPrint('Starting services ...');
+  debugPrint('Starting services...');
 
   Get.put(Setting());
 
@@ -35,5 +38,5 @@ void initServices() {
     ),
   );
 
-  debugPrint('All services started...');
+  debugPrint('All services started');
 }

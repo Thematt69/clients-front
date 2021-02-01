@@ -14,15 +14,15 @@ class HomeView extends GetView<HomeController> {
     return Scaffold(
       drawer: XDrawer(),
       appBar: AppBar(
-        title: Text('Listing des clients'),
+        title: Text('appTitle'.tr),
         centerTitle: true,
       ),
-      body: _buildContent(context),
+      body: _buildContent(),
       floatingActionButton: FloatingActionButton(
-        tooltip: "Revenir en haut",
+        tooltip: 'comeBackUp'.tr,
         child: Icon(MdiIcons.arrowUp),
-        onPressed: () {
-          controller.scrollController.animateTo(
+        onPressed: () async {
+          await controller.scrollController.animateTo(
             0,
             duration: Duration(
               milliseconds: 200,
@@ -34,7 +34,7 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  Widget _buildContent(BuildContext context) {
+  Widget _buildContent() {
     return Column(
       children: [
         Padding(
@@ -46,7 +46,7 @@ class HomeView extends GetView<HomeController> {
                   controller: controller.textController,
                   maxLines: 1,
                   decoration: InputDecoration(
-                    labelText: 'Recherche',
+                    labelText: 'search'.tr,
                     prefixIcon: Icon(
                       MdiIcons.magnify,
                     ),
@@ -62,7 +62,7 @@ class HomeView extends GetView<HomeController> {
             loading: () => Center(
               child: LinearProgressIndicator(),
             ),
-            loaded: () => _buildList(context),
+            loaded: () => _buildList(),
             error: () {
               return XErrorPage(
                 refresh: controller.refresh,
@@ -74,19 +74,21 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  Widget _buildList(BuildContext context) {
+  Widget _buildList() {
     return Expanded(
       child: Column(
         children: [
           Center(
             child: Padding(
               padding: const EdgeInsets.all(8),
-              child: Text('${controller.clientsList.length} clients trouvés'),
+              child: Text(
+                '${controller.clientsList.length} ' + 'clientsFound'.tr,
+              ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: _buildEnteteList(context),
+            child: _buildHeaderList(),
           ),
           Expanded(
             child: Padding(
@@ -143,7 +145,7 @@ class HomeView extends GetView<HomeController> {
                       ),
                     )
                   : Center(
-                      child: Text("Aucun client"),
+                      child: Text('noClientsFound'.tr),
                     ),
             ),
           ),
@@ -152,41 +154,41 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  Widget _buildEnteteList(BuildContext context) {
+  Widget _buildHeaderList() {
     return Row(
       children: [
         Expanded(
           child: Text(
-            'Prénom',
-            style: Theme.of(context).textTheme.headline2,
+            'firstName'.tr,
+            style: Get.theme.textTheme.headline2,
             textAlign: TextAlign.center,
           ),
         ),
         Expanded(
           child: Text(
-            'Nom',
-            style: Theme.of(context).textTheme.headline2,
+            'lastName'.tr,
+            style: Get.theme.textTheme.headline2,
             textAlign: TextAlign.center,
           ),
         ),
         Expanded(
           child: Text(
-            'Adresse',
-            style: Theme.of(context).textTheme.headline2,
+            'address'.tr,
+            style: Get.theme.textTheme.headline2,
             textAlign: TextAlign.center,
           ),
         ),
         Expanded(
           child: Text(
-            'Ville',
-            style: Theme.of(context).textTheme.headline2,
+            'city'.tr,
+            style: Get.theme.textTheme.headline2,
             textAlign: TextAlign.center,
           ),
         ),
         Expanded(
           child: Text(
-            'Code postal',
-            style: Theme.of(context).textTheme.headline2,
+            'postalCode'.tr,
+            style: Get.theme.textTheme.headline2,
             textAlign: TextAlign.center,
           ),
         ),

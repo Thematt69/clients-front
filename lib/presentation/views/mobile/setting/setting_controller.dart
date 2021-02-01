@@ -10,16 +10,11 @@ class SettingController extends GetxController {
   TextEditingController textEditingController;
   @override
   void onInit() {
-    try {
-      state.value = SettingState.loading();
+    state.value = SettingState.loading();
 
-      textEditingController =
-          TextEditingController(text: Get.find<Setting>().ip);
+    textEditingController = TextEditingController(text: Get.find<Setting>().ip);
 
-      state.value = SettingState.loaded();
-    } catch (e) {
-      state.value = SettingState.error();
-    }
+    state.value = SettingState.loaded();
     super.onInit();
   }
 
