@@ -34,7 +34,7 @@ class SettingController extends GetxController {
       state.value = SettingState.testing();
 
       String ip = textEditingController.text;
-      await Get.find<RestApiClient>().client.get('http://$ip');
+      await Get.find<RestApiClient>().client.get('http://$ip/');
 
       state.value = SettingState.testSuccess();
 
