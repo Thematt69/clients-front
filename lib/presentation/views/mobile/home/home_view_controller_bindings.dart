@@ -5,9 +5,9 @@ import 'package:clients/infrastructure/dtos/dtos.exports.dart';
 import 'package:clients/infrastructure/repositories/clients_repository_imp.dart';
 import 'package:get/get.dart';
 
-import 'home_controller.dart';
+import 'home_view_controller.dart';
 
-class HomeControllerBinding extends Bindings {
+class HomeViewControllerBinding extends Bindings {
   @override
   void dependencies() {
     Get.put<EntityFactory>(Client());
@@ -20,7 +20,7 @@ class HomeControllerBinding extends Bindings {
       clients: Get.find<EntityFactory>(),
       clientsRepository: Get.find<ClientsRepositoryImp>(),
     ));
-    Get.put(HomeController(
+    Get.put(HomeViewController(
       clientsController: Get.find<ClientsController>(),
     ));
   }

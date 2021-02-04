@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'setting_state.dart';
+part of 'ip_adress_view_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -10,8 +10,8 @@ part of 'setting_state.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-class _$SettingStateTearOff {
-  const _$SettingStateTearOff();
+class _$IpAdressViewStateTearOff {
+  const _$IpAdressViewStateTearOff();
 
 // ignore: unused_element
   Initial initial() {
@@ -26,11 +26,6 @@ class _$SettingStateTearOff {
 // ignore: unused_element
   Loaded loaded() {
     return const Loaded();
-  }
-
-// ignore: unused_element
-  Error error() {
-    return const Error();
   }
 
 // ignore: unused_element
@@ -51,16 +46,15 @@ class _$SettingStateTearOff {
 
 /// @nodoc
 // ignore: unused_element
-const $SettingState = _$SettingStateTearOff();
+const $IpAdressViewState = _$IpAdressViewStateTearOff();
 
 /// @nodoc
-mixin _$SettingState {
+mixin _$IpAdressViewState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
     @required TResult loading(),
     @required TResult loaded(),
-    @required TResult error(),
     @required TResult testing(),
     @required TResult testSuccess(),
     @required TResult testError(),
@@ -70,7 +64,6 @@ mixin _$SettingState {
     TResult initial(),
     TResult loading(),
     TResult loaded(),
-    TResult error(),
     TResult testing(),
     TResult testSuccess(),
     TResult testError(),
@@ -81,7 +74,6 @@ mixin _$SettingState {
     @required TResult initial(Initial value),
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
-    @required TResult error(Error value),
     @required TResult testing(Testing value),
     @required TResult testSuccess(TestSuccess value),
     @required TResult testError(TestError value),
@@ -91,7 +83,6 @@ mixin _$SettingState {
     TResult initial(Initial value),
     TResult loading(Loading value),
     TResult loaded(Loaded value),
-    TResult error(Error value),
     TResult testing(Testing value),
     TResult testSuccess(TestSuccess value),
     TResult testError(TestError value),
@@ -100,19 +91,20 @@ mixin _$SettingState {
 }
 
 /// @nodoc
-abstract class $SettingStateCopyWith<$Res> {
-  factory $SettingStateCopyWith(
-          SettingState value, $Res Function(SettingState) then) =
-      _$SettingStateCopyWithImpl<$Res>;
+abstract class $IpAdressViewStateCopyWith<$Res> {
+  factory $IpAdressViewStateCopyWith(
+          IpAdressViewState value, $Res Function(IpAdressViewState) then) =
+      _$IpAdressViewStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
-  _$SettingStateCopyWithImpl(this._value, this._then);
+class _$IpAdressViewStateCopyWithImpl<$Res>
+    implements $IpAdressViewStateCopyWith<$Res> {
+  _$IpAdressViewStateCopyWithImpl(this._value, this._then);
 
-  final SettingState _value;
+  final IpAdressViewState _value;
   // ignore: unused_field
-  final $Res Function(SettingState) _then;
+  final $Res Function(IpAdressViewState) _then;
 }
 
 /// @nodoc
@@ -122,7 +114,7 @@ abstract class $InitialCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
+class _$InitialCopyWithImpl<$Res> extends _$IpAdressViewStateCopyWithImpl<$Res>
     implements $InitialCopyWith<$Res> {
   _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
       : super(_value, (v) => _then(v as Initial));
@@ -137,7 +129,7 @@ class _$Initial implements Initial {
 
   @override
   String toString() {
-    return 'SettingState.initial()';
+    return 'IpAdressViewState.initial()';
   }
 
   @override
@@ -154,7 +146,6 @@ class _$Initial implements Initial {
     @required TResult initial(),
     @required TResult loading(),
     @required TResult loaded(),
-    @required TResult error(),
     @required TResult testing(),
     @required TResult testSuccess(),
     @required TResult testError(),
@@ -162,7 +153,6 @@ class _$Initial implements Initial {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -175,7 +165,6 @@ class _$Initial implements Initial {
     TResult initial(),
     TResult loading(),
     TResult loaded(),
-    TResult error(),
     TResult testing(),
     TResult testSuccess(),
     TResult testError(),
@@ -194,7 +183,6 @@ class _$Initial implements Initial {
     @required TResult initial(Initial value),
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
-    @required TResult error(Error value),
     @required TResult testing(Testing value),
     @required TResult testSuccess(TestSuccess value),
     @required TResult testError(TestError value),
@@ -202,7 +190,6 @@ class _$Initial implements Initial {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -215,7 +202,6 @@ class _$Initial implements Initial {
     TResult initial(Initial value),
     TResult loading(Loading value),
     TResult loaded(Loaded value),
-    TResult error(Error value),
     TResult testing(Testing value),
     TResult testSuccess(TestSuccess value),
     TResult testError(TestError value),
@@ -229,7 +215,7 @@ class _$Initial implements Initial {
   }
 }
 
-abstract class Initial implements SettingState {
+abstract class Initial implements IpAdressViewState {
   const factory Initial() = _$Initial;
 }
 
@@ -240,7 +226,7 @@ abstract class $LoadingCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
+class _$LoadingCopyWithImpl<$Res> extends _$IpAdressViewStateCopyWithImpl<$Res>
     implements $LoadingCopyWith<$Res> {
   _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
       : super(_value, (v) => _then(v as Loading));
@@ -255,7 +241,7 @@ class _$Loading implements Loading {
 
   @override
   String toString() {
-    return 'SettingState.loading()';
+    return 'IpAdressViewState.loading()';
   }
 
   @override
@@ -272,7 +258,6 @@ class _$Loading implements Loading {
     @required TResult initial(),
     @required TResult loading(),
     @required TResult loaded(),
-    @required TResult error(),
     @required TResult testing(),
     @required TResult testSuccess(),
     @required TResult testError(),
@@ -280,7 +265,6 @@ class _$Loading implements Loading {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -293,7 +277,6 @@ class _$Loading implements Loading {
     TResult initial(),
     TResult loading(),
     TResult loaded(),
-    TResult error(),
     TResult testing(),
     TResult testSuccess(),
     TResult testError(),
@@ -312,7 +295,6 @@ class _$Loading implements Loading {
     @required TResult initial(Initial value),
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
-    @required TResult error(Error value),
     @required TResult testing(Testing value),
     @required TResult testSuccess(TestSuccess value),
     @required TResult testError(TestError value),
@@ -320,7 +302,6 @@ class _$Loading implements Loading {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -333,7 +314,6 @@ class _$Loading implements Loading {
     TResult initial(Initial value),
     TResult loading(Loading value),
     TResult loaded(Loaded value),
-    TResult error(Error value),
     TResult testing(Testing value),
     TResult testSuccess(TestSuccess value),
     TResult testError(TestError value),
@@ -347,7 +327,7 @@ class _$Loading implements Loading {
   }
 }
 
-abstract class Loading implements SettingState {
+abstract class Loading implements IpAdressViewState {
   const factory Loading() = _$Loading;
 }
 
@@ -358,7 +338,7 @@ abstract class $LoadedCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LoadedCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
+class _$LoadedCopyWithImpl<$Res> extends _$IpAdressViewStateCopyWithImpl<$Res>
     implements $LoadedCopyWith<$Res> {
   _$LoadedCopyWithImpl(Loaded _value, $Res Function(Loaded) _then)
       : super(_value, (v) => _then(v as Loaded));
@@ -373,7 +353,7 @@ class _$Loaded implements Loaded {
 
   @override
   String toString() {
-    return 'SettingState.loaded()';
+    return 'IpAdressViewState.loaded()';
   }
 
   @override
@@ -390,7 +370,6 @@ class _$Loaded implements Loaded {
     @required TResult initial(),
     @required TResult loading(),
     @required TResult loaded(),
-    @required TResult error(),
     @required TResult testing(),
     @required TResult testSuccess(),
     @required TResult testError(),
@@ -398,7 +377,6 @@ class _$Loaded implements Loaded {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -411,7 +389,6 @@ class _$Loaded implements Loaded {
     TResult initial(),
     TResult loading(),
     TResult loaded(),
-    TResult error(),
     TResult testing(),
     TResult testSuccess(),
     TResult testError(),
@@ -430,7 +407,6 @@ class _$Loaded implements Loaded {
     @required TResult initial(Initial value),
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
-    @required TResult error(Error value),
     @required TResult testing(Testing value),
     @required TResult testSuccess(TestSuccess value),
     @required TResult testError(TestError value),
@@ -438,7 +414,6 @@ class _$Loaded implements Loaded {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -451,7 +426,6 @@ class _$Loaded implements Loaded {
     TResult initial(Initial value),
     TResult loading(Loading value),
     TResult loaded(Loaded value),
-    TResult error(Error value),
     TResult testing(Testing value),
     TResult testSuccess(TestSuccess value),
     TResult testError(TestError value),
@@ -465,126 +439,8 @@ class _$Loaded implements Loaded {
   }
 }
 
-abstract class Loaded implements SettingState {
+abstract class Loaded implements IpAdressViewState {
   const factory Loaded() = _$Loaded;
-}
-
-/// @nodoc
-abstract class $ErrorCopyWith<$Res> {
-  factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
-      _$ErrorCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class _$ErrorCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
-    implements $ErrorCopyWith<$Res> {
-  _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
-      : super(_value, (v) => _then(v as Error));
-
-  @override
-  Error get _value => super._value as Error;
-}
-
-/// @nodoc
-class _$Error implements Error {
-  const _$Error();
-
-  @override
-  String toString() {
-    return 'SettingState.error()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is Error);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult loaded(),
-    @required TResult error(),
-    @required TResult testing(),
-    @required TResult testSuccess(),
-    @required TResult testError(),
-  }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
-    assert(error != null);
-    assert(testing != null);
-    assert(testSuccess != null);
-    assert(testError != null);
-    return error();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult loaded(),
-    TResult error(),
-    TResult testing(),
-    TResult testSuccess(),
-    TResult testError(),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (error != null) {
-      return error();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(Initial value),
-    @required TResult loading(Loading value),
-    @required TResult loaded(Loaded value),
-    @required TResult error(Error value),
-    @required TResult testing(Testing value),
-    @required TResult testSuccess(TestSuccess value),
-    @required TResult testError(TestError value),
-  }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(loaded != null);
-    assert(error != null);
-    assert(testing != null);
-    assert(testSuccess != null);
-    assert(testError != null);
-    return error(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(Initial value),
-    TResult loading(Loading value),
-    TResult loaded(Loaded value),
-    TResult error(Error value),
-    TResult testing(Testing value),
-    TResult testSuccess(TestSuccess value),
-    TResult testError(TestError value),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (error != null) {
-      return error(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Error implements SettingState {
-  const factory Error() = _$Error;
 }
 
 /// @nodoc
@@ -594,7 +450,7 @@ abstract class $TestingCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TestingCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
+class _$TestingCopyWithImpl<$Res> extends _$IpAdressViewStateCopyWithImpl<$Res>
     implements $TestingCopyWith<$Res> {
   _$TestingCopyWithImpl(Testing _value, $Res Function(Testing) _then)
       : super(_value, (v) => _then(v as Testing));
@@ -609,7 +465,7 @@ class _$Testing implements Testing {
 
   @override
   String toString() {
-    return 'SettingState.testing()';
+    return 'IpAdressViewState.testing()';
   }
 
   @override
@@ -626,7 +482,6 @@ class _$Testing implements Testing {
     @required TResult initial(),
     @required TResult loading(),
     @required TResult loaded(),
-    @required TResult error(),
     @required TResult testing(),
     @required TResult testSuccess(),
     @required TResult testError(),
@@ -634,7 +489,6 @@ class _$Testing implements Testing {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -647,7 +501,6 @@ class _$Testing implements Testing {
     TResult initial(),
     TResult loading(),
     TResult loaded(),
-    TResult error(),
     TResult testing(),
     TResult testSuccess(),
     TResult testError(),
@@ -666,7 +519,6 @@ class _$Testing implements Testing {
     @required TResult initial(Initial value),
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
-    @required TResult error(Error value),
     @required TResult testing(Testing value),
     @required TResult testSuccess(TestSuccess value),
     @required TResult testError(TestError value),
@@ -674,7 +526,6 @@ class _$Testing implements Testing {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -687,7 +538,6 @@ class _$Testing implements Testing {
     TResult initial(Initial value),
     TResult loading(Loading value),
     TResult loaded(Loaded value),
-    TResult error(Error value),
     TResult testing(Testing value),
     TResult testSuccess(TestSuccess value),
     TResult testError(TestError value),
@@ -701,7 +551,7 @@ class _$Testing implements Testing {
   }
 }
 
-abstract class Testing implements SettingState {
+abstract class Testing implements IpAdressViewState {
   const factory Testing() = _$Testing;
 }
 
@@ -713,7 +563,8 @@ abstract class $TestSuccessCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TestSuccessCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
+class _$TestSuccessCopyWithImpl<$Res>
+    extends _$IpAdressViewStateCopyWithImpl<$Res>
     implements $TestSuccessCopyWith<$Res> {
   _$TestSuccessCopyWithImpl(
       TestSuccess _value, $Res Function(TestSuccess) _then)
@@ -729,7 +580,7 @@ class _$TestSuccess implements TestSuccess {
 
   @override
   String toString() {
-    return 'SettingState.testSuccess()';
+    return 'IpAdressViewState.testSuccess()';
   }
 
   @override
@@ -746,7 +597,6 @@ class _$TestSuccess implements TestSuccess {
     @required TResult initial(),
     @required TResult loading(),
     @required TResult loaded(),
-    @required TResult error(),
     @required TResult testing(),
     @required TResult testSuccess(),
     @required TResult testError(),
@@ -754,7 +604,6 @@ class _$TestSuccess implements TestSuccess {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -767,7 +616,6 @@ class _$TestSuccess implements TestSuccess {
     TResult initial(),
     TResult loading(),
     TResult loaded(),
-    TResult error(),
     TResult testing(),
     TResult testSuccess(),
     TResult testError(),
@@ -786,7 +634,6 @@ class _$TestSuccess implements TestSuccess {
     @required TResult initial(Initial value),
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
-    @required TResult error(Error value),
     @required TResult testing(Testing value),
     @required TResult testSuccess(TestSuccess value),
     @required TResult testError(TestError value),
@@ -794,7 +641,6 @@ class _$TestSuccess implements TestSuccess {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -807,7 +653,6 @@ class _$TestSuccess implements TestSuccess {
     TResult initial(Initial value),
     TResult loading(Loading value),
     TResult loaded(Loaded value),
-    TResult error(Error value),
     TResult testing(Testing value),
     TResult testSuccess(TestSuccess value),
     TResult testError(TestError value),
@@ -821,7 +666,7 @@ class _$TestSuccess implements TestSuccess {
   }
 }
 
-abstract class TestSuccess implements SettingState {
+abstract class TestSuccess implements IpAdressViewState {
   const factory TestSuccess() = _$TestSuccess;
 }
 
@@ -832,7 +677,8 @@ abstract class $TestErrorCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TestErrorCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
+class _$TestErrorCopyWithImpl<$Res>
+    extends _$IpAdressViewStateCopyWithImpl<$Res>
     implements $TestErrorCopyWith<$Res> {
   _$TestErrorCopyWithImpl(TestError _value, $Res Function(TestError) _then)
       : super(_value, (v) => _then(v as TestError));
@@ -847,7 +693,7 @@ class _$TestError implements TestError {
 
   @override
   String toString() {
-    return 'SettingState.testError()';
+    return 'IpAdressViewState.testError()';
   }
 
   @override
@@ -864,7 +710,6 @@ class _$TestError implements TestError {
     @required TResult initial(),
     @required TResult loading(),
     @required TResult loaded(),
-    @required TResult error(),
     @required TResult testing(),
     @required TResult testSuccess(),
     @required TResult testError(),
@@ -872,7 +717,6 @@ class _$TestError implements TestError {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -885,7 +729,6 @@ class _$TestError implements TestError {
     TResult initial(),
     TResult loading(),
     TResult loaded(),
-    TResult error(),
     TResult testing(),
     TResult testSuccess(),
     TResult testError(),
@@ -904,7 +747,6 @@ class _$TestError implements TestError {
     @required TResult initial(Initial value),
     @required TResult loading(Loading value),
     @required TResult loaded(Loaded value),
-    @required TResult error(Error value),
     @required TResult testing(Testing value),
     @required TResult testSuccess(TestSuccess value),
     @required TResult testError(TestError value),
@@ -912,7 +754,6 @@ class _$TestError implements TestError {
     assert(initial != null);
     assert(loading != null);
     assert(loaded != null);
-    assert(error != null);
     assert(testing != null);
     assert(testSuccess != null);
     assert(testError != null);
@@ -925,7 +766,6 @@ class _$TestError implements TestError {
     TResult initial(Initial value),
     TResult loading(Loading value),
     TResult loaded(Loaded value),
-    TResult error(Error value),
     TResult testing(Testing value),
     TResult testSuccess(TestSuccess value),
     TResult testError(TestError value),
@@ -939,6 +779,6 @@ class _$TestError implements TestError {
   }
 }
 
-abstract class TestError implements SettingState {
+abstract class TestError implements IpAdressViewState {
   const factory TestError() = _$TestError;
 }

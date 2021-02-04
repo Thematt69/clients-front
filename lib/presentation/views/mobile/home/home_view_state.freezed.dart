@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'home_state.dart';
+part of 'home_view_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -10,8 +10,8 @@ part of 'home_state.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-class _$HomeStateTearOff {
-  const _$HomeStateTearOff();
+class _$HomeViewStateTearOff {
+  const _$HomeViewStateTearOff();
 
 // ignore: unused_element
   Initial initial() {
@@ -36,10 +36,10 @@ class _$HomeStateTearOff {
 
 /// @nodoc
 // ignore: unused_element
-const $HomeState = _$HomeStateTearOff();
+const $HomeViewState = _$HomeViewStateTearOff();
 
 /// @nodoc
-mixin _$HomeState {
+mixin _$HomeViewState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
@@ -73,18 +73,20 @@ mixin _$HomeState {
 }
 
 /// @nodoc
-abstract class $HomeStateCopyWith<$Res> {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
-      _$HomeStateCopyWithImpl<$Res>;
+abstract class $HomeViewStateCopyWith<$Res> {
+  factory $HomeViewStateCopyWith(
+          HomeViewState value, $Res Function(HomeViewState) then) =
+      _$HomeViewStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
-  _$HomeStateCopyWithImpl(this._value, this._then);
+class _$HomeViewStateCopyWithImpl<$Res>
+    implements $HomeViewStateCopyWith<$Res> {
+  _$HomeViewStateCopyWithImpl(this._value, this._then);
 
-  final HomeState _value;
+  final HomeViewState _value;
   // ignore: unused_field
-  final $Res Function(HomeState) _then;
+  final $Res Function(HomeViewState) _then;
 }
 
 /// @nodoc
@@ -94,7 +96,7 @@ abstract class $InitialCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+class _$InitialCopyWithImpl<$Res> extends _$HomeViewStateCopyWithImpl<$Res>
     implements $InitialCopyWith<$Res> {
   _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
       : super(_value, (v) => _then(v as Initial));
@@ -109,7 +111,7 @@ class _$Initial implements Initial {
 
   @override
   String toString() {
-    return 'HomeState.initial()';
+    return 'HomeViewState.initial()';
   }
 
   @override
@@ -183,7 +185,7 @@ class _$Initial implements Initial {
   }
 }
 
-abstract class Initial implements HomeState {
+abstract class Initial implements HomeViewState {
   const factory Initial() = _$Initial;
 }
 
@@ -194,7 +196,7 @@ abstract class $LoadingCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+class _$LoadingCopyWithImpl<$Res> extends _$HomeViewStateCopyWithImpl<$Res>
     implements $LoadingCopyWith<$Res> {
   _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
       : super(_value, (v) => _then(v as Loading));
@@ -209,7 +211,7 @@ class _$Loading implements Loading {
 
   @override
   String toString() {
-    return 'HomeState.loading()';
+    return 'HomeViewState.loading()';
   }
 
   @override
@@ -283,7 +285,7 @@ class _$Loading implements Loading {
   }
 }
 
-abstract class Loading implements HomeState {
+abstract class Loading implements HomeViewState {
   const factory Loading() = _$Loading;
 }
 
@@ -294,7 +296,7 @@ abstract class $LoadedCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LoadedCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+class _$LoadedCopyWithImpl<$Res> extends _$HomeViewStateCopyWithImpl<$Res>
     implements $LoadedCopyWith<$Res> {
   _$LoadedCopyWithImpl(Loaded _value, $Res Function(Loaded) _then)
       : super(_value, (v) => _then(v as Loaded));
@@ -309,7 +311,7 @@ class _$Loaded implements Loaded {
 
   @override
   String toString() {
-    return 'HomeState.loaded()';
+    return 'HomeViewState.loaded()';
   }
 
   @override
@@ -383,7 +385,7 @@ class _$Loaded implements Loaded {
   }
 }
 
-abstract class Loaded implements HomeState {
+abstract class Loaded implements HomeViewState {
   const factory Loaded() = _$Loaded;
 }
 
@@ -394,7 +396,7 @@ abstract class $ErrorCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ErrorCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+class _$ErrorCopyWithImpl<$Res> extends _$HomeViewStateCopyWithImpl<$Res>
     implements $ErrorCopyWith<$Res> {
   _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
       : super(_value, (v) => _then(v as Error));
@@ -409,7 +411,7 @@ class _$Error implements Error {
 
   @override
   String toString() {
-    return 'HomeState.error()';
+    return 'HomeViewState.error()';
   }
 
   @override
@@ -483,6 +485,6 @@ class _$Error implements Error {
   }
 }
 
-abstract class Error implements HomeState {
+abstract class Error implements HomeViewState {
   const factory Error() = _$Error;
 }

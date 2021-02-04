@@ -1,17 +1,17 @@
 import 'package:clients/domain/core/entities/entities.exports.dart';
 import 'package:clients/domain/features/clients/controllers/clients_controller.dart';
-import 'package:clients/presentation/views/mobile/home/home_state.dart';
+import 'package:clients/presentation/views/mobile/home/home_view_state.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
+class HomeViewController extends GetxController {
   final ClientsController clientsController;
 
-  HomeController({
+  HomeViewController({
     @required this.clientsController,
   });
 
-  Rx<HomeState> state = HomeState.initial().obs;
+  Rx<HomeViewState> state = HomeViewState.initial().obs;
   RxBool isCancel = false.obs;
   RxList<Client> clientsList = <Client>[].obs;
   TextEditingController textController;
@@ -21,16 +21,16 @@ class HomeController extends GetxController {
   @override
   Future<void> onInit() async {
     try {
-      state.value = HomeState.loading();
+      state.value = HomeViewState.loading();
 
       scrollController = ScrollController();
       textController = TextEditingController(text: "");
 
       clientsList.addAll((await clientsController.index()).data);
 
-      state.value = HomeState.loaded();
+      state.value = HomeViewState.loaded();
     } catch (e) {
-      state.value = HomeState.error();
+      state.value = HomeViewState.error();
     }
     super.onInit();
   }
@@ -52,7 +52,7 @@ class HomeController extends GetxController {
   @override
   Future<void> refresh() async {
     try {
-      state.value = HomeState.loading();
+      state.value = HomeViewState.loading();
 
       clientsList.clear();
       if (textController.text != "") {
@@ -62,9 +62,9 @@ class HomeController extends GetxController {
         clientsList.addAll((await clientsController.index()).data);
       }
 
-      state.value = HomeState.loaded();
+      state.value = HomeViewState.loaded();
     } catch (e) {
-      state.value = HomeState.error();
+      state.value = HomeViewState.error();
     }
     super.refresh();
   }

@@ -30,6 +30,10 @@ class Traduction extends Translations {
           'unknownError': 'Unknown error',
           'connectionServerError': 'Error connecting to the server',
           'reload': 'Reload the page',
+          'app': 'Application',
+          'changeLanguage': 'Change the language',
+          'french': 'French',
+          'english': 'English',
         },
         'fr_FR': {
           'appTitle': 'Listing des clients',
@@ -58,6 +62,10 @@ class Traduction extends Translations {
           'unknownError': 'Erreur inconnue',
           'connectionServerError': 'Erreur de connexion au serveur',
           'reload': 'Recharger la page',
+          'app': 'Application',
+          'changeLanguage': 'Changer la langue',
+          'french': 'Français',
+          'english': 'Anglais',
         }
       };
 }

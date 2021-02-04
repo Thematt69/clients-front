@@ -8,12 +8,12 @@ class Nav {
     GetPage(
       name: Routes.HOME,
       page: () => mobile.HomeView(),
-      binding: mobile.HomeControllerBinding(),
+      binding: mobile.HomeViewControllerBinding(),
     ),
     GetPage(
-      name: Routes.SETTING,
-      page: () => mobile.SettingView(),
-      binding: mobile.SettingControllerBinding(),
-    )
+      name: Routes.IPADRESS,
+      page: () => mobile.IpAdressView(),
+      binding: mobile.IpAdressViewControllerBinding(),
+    ),
   ];
 }

@@ -1,20 +1,21 @@
 import 'package:clients/domain/core/entities/entities.exports.dart';
 import 'package:clients/infrastructure/api/rest_api_client.dart';
 import 'package:clients/presentation/navigation/routes.dart';
-import 'package:clients/presentation/views/mobile/setting/setting_state.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SettingController extends GetxController {
-  Rx<SettingState> state = SettingState.initial().obs;
+import 'ip_adress_view_state.dart';
+
+class IpAdressViewController extends GetxController {
+  Rx<IpAdressViewState> state = IpAdressViewState.initial().obs;
   TextEditingController textEditingController;
   @override
   void onInit() {
-    state.value = SettingState.loading();
+    state.value = IpAdressViewState.loading();
 
     textEditingController = TextEditingController(text: Get.find<Setting>().ip);
 
-    state.value = SettingState.loaded();
+    state.value = IpAdressViewState.loaded();
     super.onInit();
   }
 
@@ -26,18 +27,18 @@ class SettingController extends GetxController {
 
   Future<void> testingIp() async {
     try {
-      state.value = SettingState.testing();
+      state.value = IpAdressViewState.testing();
 
       String ip = textEditingController.text;
       await Get.find<RestApiClient>().client.get('http://$ip/');
 
-      state.value = SettingState.testSuccess();
+      state.value = IpAdressViewState.testSuccess();
 
       Get.find<Setting>().ip = ip;
       Get.find<RestApiClient>().changeUrl();
       Get.offAllNamed(Routes.HOME);
     } catch (e) {
-      state.value = SettingState.testError();
+      state.value = IpAdressViewState.testError();
     }
   }
 }

@@ -1,11 +1,12 @@
 import 'package:clients/presentation/core/widgets/x_drawer.dart';
 import 'package:clients/presentation/navigation/routes.dart';
-import 'package:clients/presentation/views/mobile/setting/setting_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-class SettingView extends GetView<SettingController> {
+import '../views_mobile.exports.dart';
+
+class IpAdressView extends GetView<IpAdressViewController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

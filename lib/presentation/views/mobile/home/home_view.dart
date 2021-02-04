@@ -4,9 +4,9 @@ import 'package:clients/presentation/core/widgets/x_gradient_divider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'home_controller.dart';
+import 'home_view_controller.dart';
 
-class HomeView extends GetView<HomeController> {
+class HomeView extends GetView<HomeViewController> {
   HomeView({Key key}) : super(key: key);
 
   @override
