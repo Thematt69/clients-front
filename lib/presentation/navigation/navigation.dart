@@ -15,5 +15,10 @@ class Nav {
       page: () => mobile.IpAdressView(),
       binding: mobile.IpAdressViewControllerBinding(),
     ),
+    GetPage(
+      name: Routes.GALLERY,
+      page: () => mobile.GalleryView(),
+      binding: mobile.GalleryViewControllerBinding(),
+    ),
   ];
 }

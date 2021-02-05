@@ -14,7 +14,7 @@ void main() async {
   var initialRoute = await Routes.initialRoute;
   runApp(
     GetMaterialApp(
-      title: 'appTitle'.tr,
+      title: 'Thematt69 - App',
       initialRoute: initialRoute,
       getPages: Nav.routes,
       theme: XThemeData.light(),

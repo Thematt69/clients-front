@@ -15,7 +15,7 @@ class HomeViewController extends GetxController {
   RxBool isCancel = false.obs;
   RxList<Client> clientsList = <Client>[].obs;
   TextEditingController textController;
-  String recherche = "";
+  RxString recherche = "".obs;
   ScrollController scrollController;
 
   @override
@@ -38,13 +38,15 @@ class HomeViewController extends GetxController {
   @override
   void onReady() async {
     textController.addListener(() async {
-      if (textController.text != recherche) {
-        recherche = textController.text;
-
-        clientsList.clear();
-        clientsList.addAll(
-            (await clientsController.show(value: textController.text)).data);
+      if (textController.text != recherche.value) {
+        recherche.value = textController.text;
       }
+    });
+
+    debounce(recherche, (_) async {
+      clientsList.clear();
+      clientsList
+          .addAll((await clientsController.show(value: recherche.value)).data);
     });
     super.onReady();
   }

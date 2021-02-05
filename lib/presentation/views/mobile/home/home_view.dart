@@ -14,7 +14,7 @@ class HomeView extends GetView<HomeViewController> {
     return Scaffold(
       drawer: XDrawer(),
       appBar: AppBar(
-        title: Text('appTitle'.tr),
+        title: Text('customersListing'.tr),
         centerTitle: true,
       ),
       body: _buildContent(),

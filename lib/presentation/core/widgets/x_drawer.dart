@@ -44,9 +44,49 @@ class XDrawer extends GetView {
             ),
             ListTile(
               leading: Icon(MdiIcons.formatListText),
-              title: Text('appTitle'.tr),
+              title: Text('customersListing'.tr),
               onTap: () {
                 Get.offAllNamed(Routes.HOME);
+              },
+            ),
+            ListTile(
+              leading: Icon(MdiIcons.imageText),
+              title: Text('gallery'.tr),
+              onTap: () {
+                TextEditingController textEditingController =
+                    TextEditingController(text: '');
+                Get.dialog(
+                  Dialog(
+                    child: SizedBox(
+                      width: context.width * 0.8,
+                      height: 100,
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 12, right: 12),
+                          child: TextFormField(
+                            controller: textEditingController,
+                            keyboardType: TextInputType.visiblePassword,
+                            decoration: InputDecoration(
+                              labelText: 'enterPassword'.tr,
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Get.theme.accentColor,
+                                  width: 1,
+                                ),
+                              ),
+                              labelStyle: TextStyle(color: Colors.red),
+                            ),
+                            onChanged: (String value) {
+                              if (value == "thematt69") {
+                                Get.offAllNamed(Routes.GALLERY);
+                              }
+                            },
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                );
               },
             ),
             ListTile(
@@ -66,7 +106,7 @@ class XDrawer extends GetView {
                 Get.dialog(
                   Dialog(
                     child: SizedBox(
-                      width: Get.width * 0.8,
+                      width: context.width * 0.8,
                       height: 100,
                       child: Center(
                         child: Padding(

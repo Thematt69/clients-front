@@ -12,7 +12,7 @@ class IpAdressView extends GetView<IpAdressViewController> {
     return Scaffold(
       drawer: XDrawer(),
       appBar: AppBar(
-        title: Text('appTitle'.tr),
+        title: Text('customersListing'.tr),
         centerTitle: true,
       ),
       body: Obx(
@@ -36,7 +36,7 @@ class IpAdressView extends GetView<IpAdressViewController> {
           children: [
             TextFormField(
               controller: controller.textEditingController,
-              keyboardType: TextInputType.number,
+              keyboardType: TextInputType.url,
               decoration: InputDecoration(
                 labelText: 'ipAdress'.tr,
               ),

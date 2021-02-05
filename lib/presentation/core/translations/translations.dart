@@ -4,7 +4,8 @@ class Traduction extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'en_US': {
-          'appTitle': 'Listing of customers',
+          'customersListing': 'Listing of customers',
+          'gallery': 'Gallery',
           'comeBackUp': 'Come back up',
           'search': 'Search',
           'clientsFound': 'customers found',
@@ -34,9 +35,11 @@ class Traduction extends Translations {
           'changeLanguage': 'Change the language',
           'french': 'French',
           'english': 'English',
+          'enterPassword': 'Enter password',
         },
         'fr_FR': {
-          'appTitle': 'Listing des clients',
+          'customersListing': 'Listing des clients',
+          'gallery': 'Galerie',
           'comeBackUp': 'Revenir en haut',
           'search': 'Rechercher',
           'clientsFound': 'clients trouvés',
@@ -66,6 +69,7 @@ class Traduction extends Translations {
           'changeLanguage': 'Changer la langue',
           'french': 'Français',
           'english': 'Anglais',
+          'enterPassword': 'Saisir le mot de passe',
         }
       };
 }

@@ -3,4 +3,5 @@ class Routes {
 
   static const HOME = '/';
   static const IPADRESS = "/ip-adress";
+  static const GALLERY = "/gallery";
 }
