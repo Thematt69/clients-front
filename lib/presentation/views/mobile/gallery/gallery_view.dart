@@ -18,15 +18,34 @@ class GalleryView extends GetView<GalleryViewController> {
           loading: () => Center(
             child: CircularProgressIndicator(),
           ),
-          orElse: () => _buildContent(),
+          orElse: () => _buildContent(context),
         ),
       ),
     );
   }
 
-  Widget _buildContent() {
+  Widget _buildContent(BuildContext context) {
     return Center(
-      child: Text('gallery'.tr),
+      child: GridView.count(
+        crossAxisCount: context.width ~/ 140,
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
+        padding: const EdgeInsets.all(12),
+        children: [
+          for (var i = 0; i < 12; i++)
+            GestureDetector(
+              onTap: () {
+                Get.dialog(
+                  Dialog(
+                    backgroundColor: Colors.transparent,
+                    child: Image.asset('assets/images/icon.png'),
+                  ),
+                );
+              },
+              child: Image.asset('assets/images/icon.png'),
+            ),
+        ],
+      ),
     );
   }
 }

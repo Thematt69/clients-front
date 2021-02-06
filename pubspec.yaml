@@ -37,6 +37,8 @@ flutter_icons:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
 
 scripts:
   build: flutter pub run build_runner build --delete-conflicting-outputs
