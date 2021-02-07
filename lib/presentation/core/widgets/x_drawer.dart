@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:clients/domain/core/entities/entities.exports.dart';
 import 'package:clients/infrastructure/api/rest_api_interceptor.dart';
 import 'package:clients/presentation/navigation/routes.dart';
@@ -6,13 +8,29 @@ import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class XDrawer extends GetView {
+  RxString image = 'icon.png'.obs;
+
   @override
   Widget build(BuildContext context) {
+    getRandImage();
     return Drawer(
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: MediaQuery.of(context).padding.top),
+            Obx(
+              () => GestureDetector(
+                onTap: () => getRandImage(),
+                child: DrawerHeader(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/${image.value}"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: SizedBox(width: context.width),
+                ),
+              ),
+            ),
             ListTile(
               title: Text('serverState'.tr),
             ),
@@ -149,5 +167,25 @@ class XDrawer extends GetView {
         ),
       ),
     );
+  }
+
+  void getRandImage() {
+    switch (Random().nextInt(4)) {
+      case 0:
+        image.value = "dribbble.gif";
+        break;
+      case 1:
+        image.value = "orbit.gif";
+        break;
+      case 2:
+        image.value = "saturn.gif";
+        break;
+      case 3:
+        image.value = "summer97.gif";
+        break;
+      default:
+        image.value = "icon.png";
+        break;
+    }
   }
 }
