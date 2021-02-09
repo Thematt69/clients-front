@@ -14,4 +14,4 @@ Vous devez être sur le channel `dev` de Flutter.
 Vous pouvez lancer l'application sur votre téléphone ou sur un émulateur.  
 Le projet est disponible sur **Android et iOS**. Il est possible de rendre le projet compatible pour le web (en beta) et desktop (en alpha, inclus Windows, macOS, et Linux).  
 
-### Si vous avez un problème, envoyer moi [un mail](mailto:m.devilliers@xefi.fr).
+### Si vous avez un problème, envoyer moi [un mail](mailto:devilliers.matthieu@gmail.com).
