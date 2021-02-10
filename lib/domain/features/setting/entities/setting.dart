@@ -7,6 +7,8 @@ class Setting {
   String get racine => "/webService/public/api";
   String get url => protocole + ip + racine;
 
+  String get passwordGallery => "thematt69";
+
   Setting({
     this.ip = "127.0.0.1",
   });

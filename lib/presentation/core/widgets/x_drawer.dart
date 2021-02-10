@@ -8,28 +8,20 @@ import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class XDrawer extends GetView {
-  RxString image = 'icon.png'.obs;
-
   @override
   Widget build(BuildContext context) {
-    getRandImage();
     return Drawer(
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Obx(
-              () => GestureDetector(
-                onTap: () => getRandImage(),
-                child: DrawerHeader(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/${image.value}"),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  child: SizedBox(width: context.width),
+            DrawerHeader(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/dribbble.gif"),
+                  fit: BoxFit.cover,
                 ),
               ),
+              child: SizedBox(width: context.width),
             ),
             ListTile(
               title: Text('serverState'.tr),
@@ -95,7 +87,8 @@ class XDrawer extends GetView {
                               labelStyle: TextStyle(color: Colors.red),
                             ),
                             onChanged: (String value) {
-                              if (value == "thematt69") {
+                              if (value ==
+                                  Get.find<Setting>().passwordGallery) {
                                 Get.offAllNamed(Routes.GALLERY);
                               }
                             },
@@ -167,25 +160,5 @@ class XDrawer extends GetView {
         ),
       ),
     );
-  }
-
-  void getRandImage() {
-    switch (Random().nextInt(4)) {
-      case 0:
-        image.value = "dribbble.gif";
-        break;
-      case 1:
-        image.value = "orbit.gif";
-        break;
-      case 2:
-        image.value = "saturn.gif";
-        break;
-      case 3:
-        image.value = "summer97.gif";
-        break;
-      default:
-        image.value = "icon.png";
-        break;
-    }
   }
 }
