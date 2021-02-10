@@ -14,15 +14,17 @@ class XDrawer extends GetView {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/dribbble.gif"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: SizedBox(width: context.width),
-            ),
+            GetPlatform.isMobile && context.isPortrait
+                ? DrawerHeader(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/dribbble.gif"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    child: SizedBox(width: context.width),
+                  )
+                : SizedBox(height: 30),
             ListTile(
               title: Text('serverState'.tr),
             ),
