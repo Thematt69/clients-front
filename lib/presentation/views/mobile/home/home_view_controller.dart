@@ -1,4 +1,4 @@
-import 'package:clients/domain/core/entities/entities.exports.dart';
+import 'package:clients/domain/features/entities.exports.dart';
 import 'package:clients/domain/features/clients/controllers/clients_controller.dart';
 import 'package:clients/presentation/views/mobile/home/home_view_state.dart';
 import 'package:flutter/material.dart';

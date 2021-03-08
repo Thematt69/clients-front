@@ -1,9 +1,8 @@
 import 'package:clients/infrastructure/api/api_state.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get_rx/get_rx.dart';
-import 'rest_api_logger.dart';
 
-class RestApiInterceptor extends RestApiLogger {
+class RestApiInterceptor extends Interceptor {
   Rx<ApiState> state = ApiState.initial().obs;
 
   @override

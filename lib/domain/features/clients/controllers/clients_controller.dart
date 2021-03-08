@@ -1,4 +1,4 @@
-import 'package:clients/domain/core/entities/entities.exports.dart';
+import 'package:clients/domain/features/entities.exports.dart';
 import 'package:clients/domain/features/clients/repositories/clients_repository.dart';
 import 'package:clients/infrastructure/api/rest_api_response.dart';
 import 'package:flutter/material.dart';

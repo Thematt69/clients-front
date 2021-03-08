@@ -1,4 +1,4 @@
-import 'package:clients/domain/core/entities/entities.exports.dart';
+import 'package:clients/domain/features/entities.exports.dart';
 import 'package:clients/infrastructure/api/rest_api_interceptor.dart';
 import 'package:clients/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';

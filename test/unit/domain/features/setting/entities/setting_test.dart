@@ -1,4 +1,4 @@
-import 'package:clients/domain/core/entities/entities.exports.dart';
+import 'package:clients/domain/features/entities.exports.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
