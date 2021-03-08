@@ -7,6 +7,7 @@ part of 'client_dto.dart';
 // **************************************************************************
 
 _$_ClientDto _$_$_ClientDtoFromJson(Map<String, dynamic> json) {
+  $checkKeys(json, requiredKeys: const ['guid']);
   return _$_ClientDto(
     guid: json['guid'] as String,
     first: json['first'] as String,

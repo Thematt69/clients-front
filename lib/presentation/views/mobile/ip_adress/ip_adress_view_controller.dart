@@ -1,8 +1,9 @@
 import 'package:clients/domain/core/entities/entities.exports.dart';
 import 'package:clients/infrastructure/api/rest_api_client.dart';
-import 'package:clients/presentation/navigation/routes.dart';
+import 'package:clients/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import 'ip_adress_view_state.dart';
 
@@ -29,14 +30,25 @@ class IpAdressViewController extends GetxController {
     try {
       state.value = IpAdressViewState.testing();
 
-      String ip = textEditingController.text;
-      await Get.find<RestApiClient>().client.get('http://$ip/');
+      Setting test = Setting(ip: textEditingController.text);
 
-      state.value = IpAdressViewState.testSuccess();
+      if (!test.isForbidden) {
+        await Get.find<RestApiClient>()
+            .client
+            .get(test.protocole + test.ip + "/");
 
-      Get.find<Setting>().ip = ip;
-      Get.find<RestApiClient>().changeUrl();
-      Get.offAllNamed(Routes.HOME);
+        state.value = IpAdressViewState.testSuccess();
+
+        Get.find<Setting>().ip = test.ip;
+        Get.find<RestApiClient>().changeUrl();
+        Get.offAllNamed(Routes.HOME);
+      } else {
+        Get.snackbar(
+          'Adresse incorrect',
+          "Cette adresse n'est pas utilisable !",
+          icon: Icon(MdiIcons.alert),
+        );
+      }
     } catch (e) {
       state.value = IpAdressViewState.testError();
     }

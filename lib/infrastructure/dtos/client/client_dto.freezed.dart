@@ -18,7 +18,7 @@ class _$ClientDtoTearOff {
 
 // ignore: unused_element
   _ClientDto call(
-      {@JsonKey(name: 'guid') String guid,
+      {@JsonKey(name: 'guid', required: true) String guid,
       @JsonKey(name: 'first') String first,
       @JsonKey(name: 'last') String last,
       @JsonKey(name: 'street') String street,
@@ -46,7 +46,7 @@ const $ClientDto = _$ClientDtoTearOff();
 
 /// @nodoc
 mixin _$ClientDto {
-  @JsonKey(name: 'guid')
+  @JsonKey(name: 'guid', required: true)
   String get guid;
   @JsonKey(name: 'first')
   String get first;
@@ -69,7 +69,7 @@ abstract class $ClientDtoCopyWith<$Res> {
   factory $ClientDtoCopyWith(ClientDto value, $Res Function(ClientDto) then) =
       _$ClientDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'guid') String guid,
+      {@JsonKey(name: 'guid', required: true) String guid,
       @JsonKey(name: 'first') String first,
       @JsonKey(name: 'last') String last,
       @JsonKey(name: 'street') String street,
@@ -112,7 +112,7 @@ abstract class _$ClientDtoCopyWith<$Res> implements $ClientDtoCopyWith<$Res> {
       __$ClientDtoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'guid') String guid,
+      {@JsonKey(name: 'guid', required: true) String guid,
       @JsonKey(name: 'first') String first,
       @JsonKey(name: 'last') String last,
       @JsonKey(name: 'street') String street,
@@ -154,7 +154,7 @@ class __$ClientDtoCopyWithImpl<$Res> extends _$ClientDtoCopyWithImpl<$Res>
 /// @nodoc
 class _$_ClientDto implements _ClientDto {
   const _$_ClientDto(
-      {@JsonKey(name: 'guid') this.guid,
+      {@JsonKey(name: 'guid', required: true) this.guid,
       @JsonKey(name: 'first') this.first,
       @JsonKey(name: 'last') this.last,
       @JsonKey(name: 'street') this.street,
@@ -165,7 +165,7 @@ class _$_ClientDto implements _ClientDto {
       _$_$_ClientDtoFromJson(json);
 
   @override
-  @JsonKey(name: 'guid')
+  @JsonKey(name: 'guid', required: true)
   final String guid;
   @override
   @JsonKey(name: 'first')
@@ -229,7 +229,7 @@ class _$_ClientDto implements _ClientDto {
 
 abstract class _ClientDto implements ClientDto {
   const factory _ClientDto(
-      {@JsonKey(name: 'guid') String guid,
+      {@JsonKey(name: 'guid', required: true) String guid,
       @JsonKey(name: 'first') String first,
       @JsonKey(name: 'last') String last,
       @JsonKey(name: 'street') String street,
@@ -240,7 +240,7 @@ abstract class _ClientDto implements ClientDto {
       _$_ClientDto.fromJson;
 
   @override
-  @JsonKey(name: 'guid')
+  @JsonKey(name: 'guid', required: true)
   String get guid;
   @override
   @JsonKey(name: 'first')

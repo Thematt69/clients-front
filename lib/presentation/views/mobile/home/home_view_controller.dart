@@ -28,7 +28,7 @@ class HomeViewController extends GetxController {
 
       clientsList.addAll((await clientsController.index()).data);
 
-      state.value = HomeViewState.loaded();
+      state.value = HomeViewState.success();
     } catch (e) {
       state.value = HomeViewState.error();
     }
@@ -37,17 +37,21 @@ class HomeViewController extends GetxController {
 
   @override
   void onReady() async {
-    textController.addListener(() async {
-      if (textController.text != recherche.value) {
-        recherche.value = textController.text;
-      }
-    });
+    try {
+      textController.addListener(() async {
+        if (textController.text != recherche.value) {
+          recherche.value = textController.text;
+        }
+      });
 
-    debounce(recherche, (_) async {
-      clientsList.clear();
-      clientsList
-          .addAll((await clientsController.show(value: recherche.value)).data);
-    });
+      debounce(recherche, (_) async {
+        clientsList.clear();
+        clientsList.addAll(
+            (await clientsController.show(value: recherche.value)).data);
+      });
+    } catch (e) {
+      state.value = HomeViewState.error();
+    }
     super.onReady();
   }
 
@@ -64,7 +68,7 @@ class HomeViewController extends GetxController {
         clientsList.addAll((await clientsController.index()).data);
       }
 
-      state.value = HomeViewState.loaded();
+      state.value = HomeViewState.success();
     } catch (e) {
       state.value = HomeViewState.error();
     }

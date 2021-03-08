@@ -1,5 +1,5 @@
 import 'package:clients/presentation/core/widgets/x_drawer.dart';
-import 'package:clients/presentation/core/widgets/x_error_page.dart';
+import 'package:clients/presentation/core/widgets/error_page.dart';
 import 'package:clients/presentation/core/widgets/x_gradient_divider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -62,9 +62,9 @@ class HomeView extends GetView<HomeViewController> {
             loading: () => Center(
               child: LinearProgressIndicator(),
             ),
-            loaded: () => _buildList(),
+            success: () => _buildList(),
             error: () {
-              return XErrorPage(
+              return ErrorPage(
                 refresh: controller.refresh,
               );
             },
@@ -100,7 +100,9 @@ class HomeView extends GetView<HomeViewController> {
                         controller: controller.scrollController,
                         itemCount: controller.clientsList.length,
                         separatorBuilder: (context, index) {
-                          return XGradientDivider.white();
+                          return GradientDivider.color(
+                            color: Colors.white,
+                          );
                         },
                         itemBuilder: (context, index) {
                           return Padding(

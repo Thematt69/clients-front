@@ -24,8 +24,13 @@ class _$GalleryViewStateTearOff {
   }
 
 // ignore: unused_element
-  Loaded loaded() {
-    return const Loaded();
+  Success success() {
+    return const Success();
+  }
+
+// ignore: unused_element
+  Error error() {
+    return const Error();
   }
 }
 
@@ -39,26 +44,30 @@ mixin _$GalleryViewState {
   TResult when<TResult extends Object>({
     @required TResult initial(),
     @required TResult loading(),
-    @required TResult loaded(),
+    @required TResult success(),
+    @required TResult error(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
     TResult loading(),
-    TResult loaded(),
+    TResult success(),
+    TResult error(),
     @required TResult orElse(),
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(Initial value),
     @required TResult loading(Loading value),
-    @required TResult loaded(Loaded value),
+    @required TResult success(Success value),
+    @required TResult error(Error value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(Initial value),
     TResult loading(Loading value),
-    TResult loaded(Loaded value),
+    TResult success(Success value),
+    TResult error(Error value),
     @required TResult orElse(),
   });
 }
@@ -118,11 +127,13 @@ class _$Initial implements Initial {
   TResult when<TResult extends Object>({
     @required TResult initial(),
     @required TResult loading(),
-    @required TResult loaded(),
+    @required TResult success(),
+    @required TResult error(),
   }) {
     assert(initial != null);
     assert(loading != null);
-    assert(loaded != null);
+    assert(success != null);
+    assert(error != null);
     return initial();
   }
 
@@ -131,7 +142,8 @@ class _$Initial implements Initial {
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
     TResult loading(),
-    TResult loaded(),
+    TResult success(),
+    TResult error(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -146,11 +158,13 @@ class _$Initial implements Initial {
   TResult map<TResult extends Object>({
     @required TResult initial(Initial value),
     @required TResult loading(Loading value),
-    @required TResult loaded(Loaded value),
+    @required TResult success(Success value),
+    @required TResult error(Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
-    assert(loaded != null);
+    assert(success != null);
+    assert(error != null);
     return initial(this);
   }
 
@@ -159,7 +173,8 @@ class _$Initial implements Initial {
   TResult maybeMap<TResult extends Object>({
     TResult initial(Initial value),
     TResult loading(Loading value),
-    TResult loaded(Loaded value),
+    TResult success(Success value),
+    TResult error(Error value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -212,11 +227,13 @@ class _$Loading implements Loading {
   TResult when<TResult extends Object>({
     @required TResult initial(),
     @required TResult loading(),
-    @required TResult loaded(),
+    @required TResult success(),
+    @required TResult error(),
   }) {
     assert(initial != null);
     assert(loading != null);
-    assert(loaded != null);
+    assert(success != null);
+    assert(error != null);
     return loading();
   }
 
@@ -225,7 +242,8 @@ class _$Loading implements Loading {
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
     TResult loading(),
-    TResult loaded(),
+    TResult success(),
+    TResult error(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -240,11 +258,13 @@ class _$Loading implements Loading {
   TResult map<TResult extends Object>({
     @required TResult initial(Initial value),
     @required TResult loading(Loading value),
-    @required TResult loaded(Loaded value),
+    @required TResult success(Success value),
+    @required TResult error(Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
-    assert(loaded != null);
+    assert(success != null);
+    assert(error != null);
     return loading(this);
   }
 
@@ -253,7 +273,8 @@ class _$Loading implements Loading {
   TResult maybeMap<TResult extends Object>({
     TResult initial(Initial value),
     TResult loading(Loading value),
-    TResult loaded(Loaded value),
+    TResult success(Success value),
+    TResult error(Error value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -269,33 +290,33 @@ abstract class Loading implements GalleryViewState {
 }
 
 /// @nodoc
-abstract class $LoadedCopyWith<$Res> {
-  factory $LoadedCopyWith(Loaded value, $Res Function(Loaded) then) =
-      _$LoadedCopyWithImpl<$Res>;
+abstract class $SuccessCopyWith<$Res> {
+  factory $SuccessCopyWith(Success value, $Res Function(Success) then) =
+      _$SuccessCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadedCopyWithImpl<$Res> extends _$GalleryViewStateCopyWithImpl<$Res>
-    implements $LoadedCopyWith<$Res> {
-  _$LoadedCopyWithImpl(Loaded _value, $Res Function(Loaded) _then)
-      : super(_value, (v) => _then(v as Loaded));
+class _$SuccessCopyWithImpl<$Res> extends _$GalleryViewStateCopyWithImpl<$Res>
+    implements $SuccessCopyWith<$Res> {
+  _$SuccessCopyWithImpl(Success _value, $Res Function(Success) _then)
+      : super(_value, (v) => _then(v as Success));
 
   @override
-  Loaded get _value => super._value as Loaded;
+  Success get _value => super._value as Success;
 }
 
 /// @nodoc
-class _$Loaded implements Loaded {
-  const _$Loaded();
+class _$Success implements Success {
+  const _$Success();
 
   @override
   String toString() {
-    return 'GalleryViewState.loaded()';
+    return 'GalleryViewState.success()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is Loaded);
+    return identical(this, other) || (other is Success);
   }
 
   @override
@@ -306,12 +327,14 @@ class _$Loaded implements Loaded {
   TResult when<TResult extends Object>({
     @required TResult initial(),
     @required TResult loading(),
-    @required TResult loaded(),
+    @required TResult success(),
+    @required TResult error(),
   }) {
     assert(initial != null);
     assert(loading != null);
-    assert(loaded != null);
-    return loaded();
+    assert(success != null);
+    assert(error != null);
+    return success();
   }
 
   @override
@@ -319,12 +342,13 @@ class _$Loaded implements Loaded {
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
     TResult loading(),
-    TResult loaded(),
+    TResult success(),
+    TResult error(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (loaded != null) {
-      return loaded();
+    if (success != null) {
+      return success();
     }
     return orElse();
   }
@@ -334,12 +358,14 @@ class _$Loaded implements Loaded {
   TResult map<TResult extends Object>({
     @required TResult initial(Initial value),
     @required TResult loading(Loading value),
-    @required TResult loaded(Loaded value),
+    @required TResult success(Success value),
+    @required TResult error(Error value),
   }) {
     assert(initial != null);
     assert(loading != null);
-    assert(loaded != null);
-    return loaded(this);
+    assert(success != null);
+    assert(error != null);
+    return success(this);
   }
 
   @override
@@ -347,17 +373,118 @@ class _$Loaded implements Loaded {
   TResult maybeMap<TResult extends Object>({
     TResult initial(Initial value),
     TResult loading(Loading value),
-    TResult loaded(Loaded value),
+    TResult success(Success value),
+    TResult error(Error value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
-    if (loaded != null) {
-      return loaded(this);
+    if (success != null) {
+      return success(this);
     }
     return orElse();
   }
 }
 
-abstract class Loaded implements GalleryViewState {
-  const factory Loaded() = _$Loaded;
+abstract class Success implements GalleryViewState {
+  const factory Success() = _$Success;
+}
+
+/// @nodoc
+abstract class $ErrorCopyWith<$Res> {
+  factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
+      _$ErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ErrorCopyWithImpl<$Res> extends _$GalleryViewStateCopyWithImpl<$Res>
+    implements $ErrorCopyWith<$Res> {
+  _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
+      : super(_value, (v) => _then(v as Error));
+
+  @override
+  Error get _value => super._value as Error;
+}
+
+/// @nodoc
+class _$Error implements Error {
+  const _$Error();
+
+  @override
+  String toString() {
+    return 'GalleryViewState.error()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is Error);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loading(),
+    @required TResult success(),
+    @required TResult error(),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(success != null);
+    assert(error != null);
+    return error();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loading(),
+    TResult success(),
+    TResult error(),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (error != null) {
+      return error();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initial(Initial value),
+    @required TResult loading(Loading value),
+    @required TResult success(Success value),
+    @required TResult error(Error value),
+  }) {
+    assert(initial != null);
+    assert(loading != null);
+    assert(success != null);
+    assert(error != null);
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(Initial value),
+    TResult loading(Loading value),
+    TResult success(Success value),
+    TResult error(Error value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Error implements GalleryViewState {
+  const factory Error() = _$Error;
 }

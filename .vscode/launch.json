@@ -41,28 +41,4 @@
       "deviceId": "chrome",
     },
   ],
-  "compounds": [
-    {
-      "name": "All Devices",
-      "configurations": [
-        "Android",
-        "iPhone",
-        "Web",
-      ]
-    },
-    {
-      "name": "Android + Web",
-      "configurations": [
-        "Android",
-        "Web",
-      ]
-    },
-    {
-      "name": "iPhone + Web",
-      "configurations": [
-        "iPhone",
-        "Web",
-      ]
-    },
-  ]
 }

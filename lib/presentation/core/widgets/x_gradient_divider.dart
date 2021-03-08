@@ -1,80 +1,69 @@
 import 'package:flutter/material.dart';
 
-class XGradientDivider extends StatelessWidget {
+/// Permet d'afficher un Divider avec un style dégradé
+/// ```
+/// GradientDivider(
+///   colors: [
+///     Colors.white10,
+///     Colors.white38,
+///     Colors.white70,
+///     Colors.white,
+///     Colors.white,
+///     Colors.white,
+///     Colors.white,
+///     Colors.white,
+///     Colors.white,
+///     Colors.white70,
+///     Colors.white38,
+///     Colors.white10,
+///   ],
+///   isVertical: false,
+///   margin: 10,
+///   thickness: 2,
+/// ),
+/// ```
+class GradientDivider extends StatelessWidget {
   final List<Color> colors;
   final double thickness;
-  final double padding;
+  final double margin;
   final bool isVertical;
 
-  const XGradientDivider({
-    Key key,
+  const GradientDivider({
+    key,
     @required this.colors,
     this.thickness = 1,
-    this.padding = 5,
+    this.margin = 5,
     this.isVertical = false,
   }) : super(key: key);
 
-  factory XGradientDivider.white() {
-    return XGradientDivider(
+  /// Permet d'afficher un Divider avec un style dégradé
+  /// ```
+  /// GradientDivider.color(
+  ///   color: Colors.amber,
+  /// ),
+  /// ```
+  factory GradientDivider.color({
+    @required Color color,
+    double thickness = 1,
+    double margin = 5,
+    bool isVertical = false,
+  }) {
+    return GradientDivider(
+      thickness: thickness,
+      margin: margin,
+      isVertical: isVertical,
       colors: [
-        Colors.transparent,
-        Colors.white24,
-        Colors.white38,
-        Colors.white38,
-        Colors.white38,
-        Colors.white38,
-        Colors.white38,
-        Colors.white38,
-        Colors.white24,
-        Colors.transparent,
-      ],
-    );
-  }
-
-  factory XGradientDivider.whiteVertical() {
-    return XGradientDivider(
-      isVertical: true,
-      colors: [
-        Colors.transparent,
-        Colors.white24,
-        Colors.white38,
-        Colors.white38,
-        Colors.white54,
-        Colors.white54,
-        Colors.white54,
-        Colors.white54,
-        Colors.white38,
-        Colors.white38,
-        Colors.white24,
-        Colors.transparent,
-      ],
-    );
-  }
-
-  factory XGradientDivider.left() {
-    return XGradientDivider(
-      colors: [
-        Colors.white54,
-        Colors.white54,
-        Colors.white54,
-        Colors.white38,
-        Colors.white38,
-        Colors.white24,
-        Colors.transparent,
-      ],
-    );
-  }
-
-  factory XGradientDivider.right() {
-    return XGradientDivider(
-      colors: [
-        Colors.transparent,
-        Colors.white24,
-        Colors.white38,
-        Colors.white38,
-        Colors.white54,
-        Colors.white54,
-        Colors.white54,
+        color.withOpacity(0.1),
+        color.withOpacity(0.5),
+        color.withOpacity(0.75),
+        color.withOpacity(1),
+        color.withOpacity(1),
+        color.withOpacity(1),
+        color.withOpacity(1),
+        color.withOpacity(1),
+        color.withOpacity(0.75),
+        color.withOpacity(0.5),
+        color.withOpacity(0.1),
       ],
     );
   }
@@ -84,7 +73,7 @@ class XGradientDivider extends StatelessWidget {
     return RotatedBox(
       quarterTurns: isVertical ? 1 : 0,
       child: Container(
-        padding: EdgeInsets.only(top: padding, bottom: padding),
+        margin: EdgeInsets.only(top: margin, bottom: margin),
         height: thickness,
         decoration: BoxDecoration(
           gradient: LinearGradient(

@@ -6,11 +6,30 @@ class GalleryViewController extends GetxController {
 
   @override
   void onInit() {
-    state.value = GalleryViewState.loading();
+    try {
+      state.value = GalleryViewState.loading();
 
-    // TODO: implement onInit
+      // TODO: implement onInit
 
-    state.value = GalleryViewState.loaded();
+      state.value = GalleryViewState.success();
+    } catch (e) {
+      state.value = GalleryViewState.error();
+    }
     super.onInit();
+  }
+
+  @override
+  void refresh() {
+    try {
+      state.value = GalleryViewState.loading();
+
+      // TODO: implement refresh
+
+      state.value = GalleryViewState.success();
+    } catch (e) {
+      state.value = GalleryViewState.error();
+    }
+    super.onInit();
+    super.refresh();
   }
 }

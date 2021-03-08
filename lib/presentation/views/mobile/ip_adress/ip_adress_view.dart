@@ -1,5 +1,5 @@
 import 'package:clients/presentation/core/widgets/x_drawer.dart';
-import 'package:clients/presentation/navigation/routes.dart';
+import 'package:clients/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';

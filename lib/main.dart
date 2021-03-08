@@ -5,18 +5,16 @@ import 'package:get/get.dart';
 import 'domain/core/entities/entities.exports.dart';
 import 'infrastructure/api/rest_api_client.dart';
 import 'infrastructure/api/rest_api_interceptor.dart';
-import 'presentation/navigation/navigation.dart';
-import 'presentation/navigation/routes.dart';
+import 'presentation/routes/routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   initServices();
-  var initialRoute = await Routes.initialRoute;
   runApp(
     GetMaterialApp(
       title: 'Thematt69 - App',
-      initialRoute: initialRoute,
-      getPages: Nav.routes,
+      initialRoute: Routes.initialRoute,
+      getPages: Routes.routes,
       theme: XThemeData.light(),
       darkTheme: XThemeData.dark(),
       translations: Traduction(),

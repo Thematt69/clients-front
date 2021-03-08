@@ -1,4 +1,5 @@
 import 'package:clients/presentation/core/widgets/x_drawer.dart';
+import 'package:clients/presentation/core/widgets/error_page.dart';
 import 'package:clients/presentation/views/mobile/gallery/gallery_view_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,12 +14,17 @@ class GalleryView extends GetView<GalleryViewController> {
         centerTitle: true,
       ),
       body: Obx(
-        () => controller.state.value.maybeWhen(
-          initial: () => SizedBox(),
-          loading: () => Center(
+        () => controller.state.value.when(
+          initial: () => const SizedBox(),
+          loading: () => const Center(
             child: CircularProgressIndicator(),
           ),
-          orElse: () => _buildContent(context),
+          success: () => _buildContent(context),
+          error: () {
+            return ErrorPage(
+              refresh: controller.refresh,
+            );
+          },
         ),
       ),
     );

@@ -6,6 +6,6 @@ part 'gallery_view_state.freezed.dart';
 abstract class GalleryViewState with _$GalleryViewState {
   const factory GalleryViewState.initial() = Initial;
   const factory GalleryViewState.loading() = Loading;
-  const factory GalleryViewState.loaded() = Loaded;
-  
+  const factory GalleryViewState.success() = Success;
+  const factory GalleryViewState.error() = Error;
 }
