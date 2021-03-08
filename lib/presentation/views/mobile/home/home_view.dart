@@ -1,6 +1,6 @@
 import 'package:clients/presentation/core/widgets/x_drawer.dart';
 import 'package:clients/presentation/core/widgets/error_page.dart';
-import 'package:clients/presentation/core/widgets/x_gradient_divider.dart';
+import 'package:clients/presentation/core/widgets/gradient_divider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';

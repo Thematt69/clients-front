@@ -1,7 +1,7 @@
+import 'package:clients/infrastructure/dtos/dtos.exports.dart';
 import '../../../../infrastructure/dtos/dtos.exports.dart';
-import '../../../core/entities/entity_factory.dart';
 
-class Client implements EntityFactory<Client, ClientDto> {
+class Client {
   String guid;
   String first;
   String last;
@@ -9,7 +9,7 @@ class Client implements EntityFactory<Client, ClientDto> {
   String city;
   int zip;
 
-  String get fulllname => "$first ${last.toUpperCase()}";
+  String get fullname => "$first ${last.toUpperCase()}";
 
   Client({
     this.guid,
@@ -19,7 +19,9 @@ class Client implements EntityFactory<Client, ClientDto> {
     this.city,
     this.zip,
   });
+}
 
+extension OnClient on Client {
   Client copyWith({
     String guid,
     String first,
@@ -38,27 +40,45 @@ class Client implements EntityFactory<Client, ClientDto> {
     );
   }
 
-  @override
-  Client fromDto(ClientDto dto) {
-    return Client(
-      guid: dto.guid,
-      first: dto.first,
-      last: dto.last,
-      street: dto.street,
-      city: dto.city,
-      zip: dto.zip,
+  ClientDto get toDto {
+    return ClientDto(
+      guid: this.guid,
+      first: this.first,
+      last: this.last,
+      street: this.street,
+      city: this.city,
+      zip: this.zip,
     );
   }
+}
 
-  @override
-  ClientDto toDto(Client entity) {
-    return ClientDto(
-      guid: entity.guid,
-      first: entity.first,
-      last: entity.last,
-      street: entity.street,
-      city: entity.city,
-      zip: entity.zip,
+extension OnListClient on List<Client> {
+  List<ClientDto> get toDto {
+    List<ClientDto> clientDtoList = <ClientDto>[];
+
+    this.forEach((entity) => clientDtoList.add(entity.toDto));
+    return clientDtoList;
+  }
+}
+
+extension OnClientDto on ClientDto {
+  Client get toEntity {
+    return Client(
+      guid: this.guid,
+      first: this.first,
+      last: this.last,
+      street: this.street,
+      city: this.city,
+      zip: this.zip,
     );
+  }
+}
+
+extension OnListClientDto on List<ClientDto> {
+  List<Client> get toEntity {
+    List<Client> clientList = <Client>[];
+
+    this.forEach((dto) => clientList.add(dto.toEntity));
+    return clientList;
   }
 }
